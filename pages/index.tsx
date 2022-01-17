@@ -24,7 +24,7 @@ function Homepage(props: {source: MDXRemoteSerializeResult}) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   await getImageFolder()
   const rawPageContent = await getPageContent('/index.md')
   const {content, data} = matter(rawPageContent)
