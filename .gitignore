@@ -2,7 +2,7 @@
 .env.local
 
 # MacOS specific
-DS_store
+.DS_Store
 
 # Logs
 logs

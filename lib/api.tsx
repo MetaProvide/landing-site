@@ -69,5 +69,5 @@ export async function getAllPagesDirs() {
   if (!Array.isArray(files)) {
     throw new Error(`Did not receive files from ${contentPath}`)
   }
-  return await files.filter( (file: FileStat) => file.type === 'directory')
+  return files.filter( (file: FileStat) => file.type === 'directory')
 }

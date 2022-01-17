@@ -12,7 +12,7 @@ const components = {
   img: ResponsiveImage,
   h1: Header,
   p: Text,
-  ContactForm
+  ContactForm: ContactForm
 }
 
 function Homepage(props: {source: MDXRemoteSerializeResult}) {

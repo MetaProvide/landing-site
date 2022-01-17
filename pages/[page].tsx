@@ -1,4 +1,4 @@
-import { getImageFolder, getPageContent, getAllPagesDirs } from '../lib/api';
+import { getPageContent, getAllPagesDirs } from '../lib/api';
 import matter from 'gray-matter';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';

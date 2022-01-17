@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function ResponsiveImage({alt, src, ...rest}: any) { 
+export default function ResponsiveImage({alt, src, ...rest}: {alt:string; src:string; }) { 
 
   const correctedSrc = src.includes('http') ? src : src.replace('..', '')
   return (

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
@@ -18,17 +19,17 @@ export default function ContactForm () {
     const formOptions = { resolver: yupResolver(validationSchema) }
 
    // get functions to build form with useForm() hook
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    function onSubmit(data: any) {
+    function onSubmit(data: unknown) {
         // display form data on success
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
         return false;
     }
 
   return (
-  <div className="lg:w-2/3 md:w-1/1 mx-auto">
+  <div className="col-span-2 lg:w-2/3 md:w-1/1 mx-auto">
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col">
