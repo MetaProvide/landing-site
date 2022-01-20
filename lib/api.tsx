@@ -38,6 +38,7 @@ export async function getImageFolder() {
   await Promise.all(files.map(async (file: FileStat) => {
     const image: string | BufferLike | ResponseDataDetailed<string | BufferLike>  = await client.getFileContents(file.filename)
 
+    // TODO figure out size of image 
     const destination = path.join(ASSETS_IMAGE_PATH, file.basename)
     if (!fs.existsSync(destination)) {
       fs.writeFileSync(destination, (image as string), {});

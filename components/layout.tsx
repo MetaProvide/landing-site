@@ -5,7 +5,7 @@ import Navbar from './navbar'
 export default function Layout({children}: {children: JSX.Element | JSX.Element[]}) {
   return (<>
       <Navbar />
-      <main className="h-screen grid grid-cols-1 lg:mx-48">{children}</main>
+      <main className="h-screen lg:mx-48">{children}</main>
     </>
   )
 }
