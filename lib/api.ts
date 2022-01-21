@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import { createClient, WebDAVClient, BufferLike, FileStat, ResponseDataDetailed } from "webdav"
 // 5 high severity vulnerabilities, but just slowdown they are OK for now
-import { ensureDirectoryExistence } from '../utils';
+import { ensureDirectoryExistence, pageUrlToName, capitalizeFirstLetter } from '../utils';
 
 const CONNECT_URL = process.env.NEXT_PUBLIC_NEXTCLOUD_CONNECT_URL || 'unset';
 const USERNAME = process.env.NEXT_PUBLIC_NEXTCLOUD_USER || 'unset';
@@ -30,7 +30,6 @@ export async function getImageFolder() {
   console.log(`Ensuring ${ASSETS_IMAGE_PATH} exists`)
 
   const files = await client.getDirectoryContents(source, { deep: true, glob: "/**/*.{png,jpg,gif}" })
-  // console.log(files)
   if (!Array.isArray(files)) {
     throw new Error(`Did not receive files from ${source}`)
   }
@@ -64,11 +63,28 @@ export async function getPageContent(relativePath: string): Promise<string> {
   return content;
 }
 
-export async function getAllPagesDirs() {
+export async function getAllPageFiles() {
   const contentPath = path.join(CMS_ROOT, `content`)
-  const files : FileStat[] | ResponseDataDetailed<FileStat[]> = await client.getDirectoryContents(contentPath)
+  const files : FileStat[] | ResponseDataDetailed<FileStat[]> = await client.getDirectoryContents(contentPath, {deep: true})
   if (!Array.isArray(files)) {
     throw new Error(`Did not receive files from ${contentPath}`)
   }
-  return files.filter( (file: FileStat) => file.type === 'directory')
+  return files.filter( (file: FileStat) => file.type === 'file' && file.basename === 'index.md')
+}
+
+
+export async function getAllNavigationItems() : {href:string, label: string}[] {
+  const allPageFiles: FileStat[] = await getAllPageFiles()
+
+  const navItems =  allPageFiles.map(file => {
+    const name = pageUrlToName(file.filename)
+    return {
+      key: name,
+      href: `/${name}`,
+      label: capitalizeFirstLetter(name)
+    }
+  }
+  )
+  
+  return navItems
 }
