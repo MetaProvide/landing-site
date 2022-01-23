@@ -7,6 +7,7 @@ import Header from '../components/header'
 import Text from '../components/text'
 import ResponsiveImage from '../components/responsiveImage'
 import ContactForm from '../components/contactForm'
+import NewsLetterForm from '../components/newsLetterForm'
 import { pageUrlToName } from '../utils'
 import {INavItem, IImageData} from '../typings'
 import { AppWrapper } from '../context/AppContext'
@@ -15,7 +16,8 @@ const components = {
 	img: ResponsiveImage,
 	h1: Header,
 	p: Text,
-	ContactForm: ContactForm
+	ContactForm: ContactForm,
+	NewsLetterForm: NewsLetterForm
 };
 
 export default function Page(props: { header: { navItems: INavItem[]}, imageData: IImageData[], source: MDXRemoteSerializeResult }) {

@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {useState} from 'react'
-import {INavItem} from '../typings'
+import { useAppContext } from '../context/AppContext'
+import { INavItem, IContextState, IImageData } from '../typings'
 
 const NavItem = ({href, label}: {href: string, label: string}) => (
   <Link href={href}>
@@ -42,15 +43,21 @@ const DefaultMenu = ({navItems}: {navItems: INavItem[]}) => (
       </div>
 )
 
-const LogoMenuItem = () => (
+const LogoMenuItem = ({logo} : {logo: IImageData | undefined}) => {
+      console.log('abc', logo)
+      return (
         <Link href='/home'>
-            <a className='flex shrink-0 items-center p-2 mr-4'>
-            <Image src={'/assets/images/logo.png'} width="200" height="100" alt='logo of metaprovide'/>
+            <a className='flex shrink-0 items-center p-2 mr-4 w-44'>
+              <Image src={logo?.src || ''} width={logo?.dimensions.width} height={logo?.dimensions.height} alt='logo of metaprovide'/>
             </a>
         </Link>);
+}
 
 export default function Navbar({navItems} : { navItems: INavItem[]}) {
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(false)
+    const appContext: IContextState = useAppContext();
+
+    const logoImage: IImageData | undefined = appContext.imageData.find(imgObj => imgObj.id === 'logo')
 
     const handleClick = () => {
       setActive(!active)
@@ -58,7 +65,7 @@ export default function Navbar({navItems} : { navItems: INavItem[]}) {
 
     return (
     <nav className='flex items-center justify-between p-3 lg:mx-36 flex-wrap md:flex-nowrap lg:max-w-4xl mx-auto'>
-      <LogoMenuItem />
+      <LogoMenuItem logo={logoImage}/>
       <DefaultMenu navItems={navItems}/>
       <HamburgerButton handleClick={handleClick} />
       <HamburgerMenu active={active} navItems={navItems} />

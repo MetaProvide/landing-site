@@ -15,7 +15,6 @@ const client = new SMTPClient({
 
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-
     try {
     const {name, email, subject, message } = (JSON.parse(req.body as string) as IEmail)
 
