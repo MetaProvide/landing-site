@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import { createClient, WebDAVClient, BufferLike, FileStat, ResponseDataDetailed } from "webdav"
 // 5 high severity vulnerabilities, but just slowdown they are OK for now
-import { ensureDirectoryExistence, pageUrlToName, capitalizeFirstLetter } from '../utils';
+import { ensureDirectoryExistence, pageUrlToName, capitalizeFirstLetter, getImageDimensions } from '../utils';
 
 const CONNECT_URL = process.env.NEXT_PUBLIC_NEXTCLOUD_CONNECT_URL || 'unset';
 const USERNAME = process.env.NEXT_PUBLIC_NEXTCLOUD_USER || 'unset';
@@ -34,10 +34,9 @@ export async function getImageFolder() {
     throw new Error(`Did not receive files from ${source}`)
   }
 
-  await Promise.all(files.map(async (file: FileStat) => {
+  const imagesObjs = await Promise.all(files.map(async (file: FileStat) => {
     const image: string | BufferLike | ResponseDataDetailed<string | BufferLike>  = await client.getFileContents(file.filename)
 
-    // TODO figure out size of image 
     const destination = path.join(ASSETS_IMAGE_PATH, file.basename)
     if (!fs.existsSync(destination)) {
       fs.writeFileSync(destination, (image as string), {});
@@ -45,7 +44,15 @@ export async function getImageFolder() {
     } else {
       console.log(`${file.basename} already exists`)
     }
+
+    return {
+      id: file.basename.split('.')[0],
+      src: `/assets/images/${file.basename}`,
+      dimensions: getImageDimensions(destination)
+    }
   }))
+
+  return imagesObjs
 
 }
 
@@ -73,7 +80,7 @@ export async function getAllPageFiles() {
 }
 
 
-export async function getAllNavigationItems() : {href:string, label: string}[] {
+export async function getAllNavigationItems() : Promise<{href:string, label: string}[]> {
   const allPageFiles: FileStat[] = await getAllPageFiles()
 
   const navItems =  allPageFiles.map(file => {

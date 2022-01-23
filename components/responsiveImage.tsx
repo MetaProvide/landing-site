@@ -1,12 +1,16 @@
 import Image from 'next/image';
+import { useAppContext } from '../context/AppContext';
+import { IContextState } from '../typings';
+export default function ResponsiveImage({alt, src, ...rest}: {alt: string; src: string; }) { 
+  const appContext: IContextState = useAppContext();
 
-export default function ResponsiveImage({alt, src, ...rest}: {alt:string; src:string; }) { 
+  const imagePathFromCms = src.includes('http') ? src : src.replace('..', '')
 
-  const correctedSrc = src.includes('http') ? src : src.replace('..', '')
-  return (
-  <div className='relative w-full mx-auto h-96' >
-    <Image alt={alt} layout="fill" objectFit='contain' src={correctedSrc} {...rest} />
-  </div>
-)
+  const splitted = imagePathFromCms.split('/')
+  const id = splitted[splitted.length - 1].split('.')[0]
+  const selectedImage = appContext.imageData.find(imgObj => imgObj.id === id)
+
+  return selectedImage ? <Image layout="responsive" alt={alt} src={selectedImage?.src} width={selectedImage?.dimensions.width} height={selectedImage?.dimensions.height}/> : 'Incorrect Image'
+
 }
 

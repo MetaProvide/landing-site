@@ -2,6 +2,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
+import {IEmail} from '../typings'
 
 export default function ContactForm () {
     const validationSchema = Yup.object().shape({
@@ -16,20 +17,28 @@ export default function ContactForm () {
             .required('Message is required')
     });
 
-    const formOptions = { resolver: yupResolver(validationSchema) }
+    const formOptions = { resolver: yupResolver(validationSchema),  }
 
    // get functions to build form with useForm() hook
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
 
     function onSubmit(data: unknown) {
+
+        const {name, email, subject, message} = data as IEmail;
+        const body = JSON.stringify({name, email, subject, message})
         // display form data on success
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
-        return false;
+        // alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
+        fetch('http://localhost:3000/api/sendEmail', {method: 'POST', body: body})
+          .then(res => console.log(res))
+          .catch(err => console.log(err))
+
     }
 
+  console.log('hejgo', errors.message)
+
   return (
-  <div className="col-span-2 lg:w-2/3 md:w-1/1 mx-auto">
+  <div className="w-100 lg:w-2/3 mx-auto">
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col">
@@ -57,8 +66,8 @@ export default function ContactForm () {
 
           <div className="text-xs text-red-700">{errors.subject?.message}</div>
         </div>
-        <div className="flex flex-col col-span-2">
-          <label htmlFor="subject">
+        <div className="flex flex-col col-span-2 w-100">
+          <label htmlFor="message">
             <div className="flex align-items">
               Message
               <span className="ml-auto opacity-75">A sentence or two is just fine</span>
@@ -68,8 +77,8 @@ export default function ContactForm () {
             maxLength={500} 
             rows={4}
             {...register('message')}
-            name="subject" 
-            className={`form-input px-3 py-2 rounded-md ${errors.subject ? 'border-red-700' : ''}`} 
+            name="message" 
+            className={`form-input px-3 py-2 rounded-md ${errors.message ? 'border-red-700' : ''}`} 
             />
           <div className="text-xs text-red-700">{errors.message?.message}</div>
         </div>

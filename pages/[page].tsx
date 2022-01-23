@@ -1,4 +1,4 @@
-import { getPageContent, getAllPageFiles, getAllNavigationItems } from '../lib/api';
+import { getPageContent, getAllPageFiles, getAllNavigationItems, getImageFolder } from '../lib/api';
 import matter from 'gray-matter';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -6,9 +6,10 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import Text from '../components/text'
 import ResponsiveImage from '../components/responsiveImage'
-import ContactForm from '../components/ContactForm'
-import { capitalizeFirstLetter, pageUrlToName } from '../utils'
-import {INavItem} from '../typings'
+import ContactForm from '../components/contactForm'
+import { pageUrlToName } from '../utils'
+import {INavItem, IImageData} from '../typings'
+import { AppWrapper } from '../context/AppContext'
 
 const components = {
 	img: ResponsiveImage,
@@ -17,16 +18,18 @@ const components = {
 	ContactForm: ContactForm
 };
 
-export default function Page(props: { header: { navItems: INavItem[]}, source: MDXRemoteSerializeResult }) {
+export default function Page(props: { header: { navItems: INavItem[]}, imageData: IImageData[], source: MDXRemoteSerializeResult }) {
 	return (
+		<AppWrapper imageData={props.imageData}>
 		<Layout header={props.header}>
 			<MDXRemote {...props.source} components={components} />
 		</Layout>
+		</AppWrapper>
 	);
 }
 
 export async function getStaticPaths() {
-	const pageFiles = await getAllPageFiles();
+	const pageFiles = await getAllPageFiles()
 
 	// Get the paths we want to pre-render based on posts
 	const paths = pageFiles.map((pageDir) => ({
@@ -41,6 +44,8 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps(paths: { params: { page: string } }) {
+	const imageData= await getImageFolder()
+
 	const basePath = paths.params.page === 'home' ? '' : `/${paths.params.page}`;
   const rawPageContent = await getPageContent(basePath + `/index.md`);
 	const { content, data } = matter(rawPageContent);
@@ -51,6 +56,7 @@ export async function getStaticProps(paths: { params: { page: string } }) {
 			header: {
 				navItems: navItems
 			},
+			imageData: imageData,
 			source: await serialize(content),
 			meta: data
 		}

@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs'
+import sizeOf from 'image-size'
 
 export function ensureDirectoryExistence(filePath: string) {
   const dirname = path.dirname(filePath);
@@ -20,3 +21,7 @@ export function pageUrlToName(url:string) {
   const name = splitted[splitted.length - 2] === 'content' ? 'home' : splitted[splitted.length - 2]
   return name 
 } 
+
+export function getImageDimensions(path: string) {
+  return sizeOf(path);
+}
