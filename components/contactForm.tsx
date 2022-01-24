@@ -35,8 +35,6 @@ export default function ContactForm () {
 
     }
 
-  console.log('hejgo', errors.message)
-
   return (
   <div className="w-100 lg:w-2/3 mx-auto">
     <form onSubmit={handleSubmit(onSubmit)}>

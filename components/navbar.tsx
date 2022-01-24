@@ -3,13 +3,18 @@ import Image from 'next/image'
 import {useState} from 'react'
 import { useAppContext } from '../context/AppContext'
 import { INavItem, IContextState, IImageData } from '../typings'
+import { useRouter } from 'next/router'
 
-const NavItem = ({href, label}: {href: string, label: string}) => (
+const NavItem = ({href, label}: {href: string, label: string}) => {
+  const router = useRouter()
+  const pageName = href.substr(1)
+  return (
   <Link href={href}>
-  <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+  <a className={`${router.query.page == pageName ? "bg-green-100" : ""} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white`}>
     {label}
   </a>
-</Link>)
+  </Link>)
+}
 
 const HamburgerButton = ({handleClick}: {handleClick: React.MouseEventHandler<HTMLButtonElement>}) => (
       <button onClick={handleClick} className='visible md:hidden lg:hidden inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'>
@@ -44,7 +49,6 @@ const DefaultMenu = ({navItems}: {navItems: INavItem[]}) => (
 )
 
 const LogoMenuItem = ({logo} : {logo: IImageData | undefined}) => {
-      console.log('abc', logo)
       return (
         <Link href='/home'>
             <a className='flex shrink-0 items-center p-2 mr-4 w-44'>
@@ -64,7 +68,7 @@ export default function Navbar({navItems} : { navItems: INavItem[]}) {
     };
 
     return (
-    <nav className='flex items-center justify-between p-3 lg:mx-36 flex-wrap md:flex-nowrap lg:max-w-4xl mx-auto'>
+    <nav className='flex items-center justify-between p-3 flex-wrap md:flex-nowrap lg:max-w-4xl mx-auto'>
       <LogoMenuItem logo={logoImage}/>
       <DefaultMenu navItems={navItems}/>
       <HamburgerButton handleClick={handleClick} />
