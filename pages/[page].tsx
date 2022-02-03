@@ -48,7 +48,7 @@ export async function getStaticPaths() {
 
 // This also gets called at build time
 export async function getStaticProps(paths: { params: { page: string } }) {
-	const imageData= await getImageFolder()
+	const imageData = await getImageFolder()
 
 	const basePath = paths.params.page === 'home' ? '' : `/${paths.params.page}`;
   const rawPageContent = await getPageContent(basePath + `/index.md`);

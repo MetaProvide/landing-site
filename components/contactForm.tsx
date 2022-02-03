@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
@@ -22,21 +23,20 @@ export default function ContactForm () {
    // get functions to build form with useForm() hook
     const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
-
+    const [successfullySent, setsuccessfullySent] = useState(false)
     function onSubmit(data: unknown) {
 
         const {name, email, subject, message} = data as IEmail;
         const body = JSON.stringify({name, email, subject, message})
-        // display form data on success
-        // alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
         fetch('http://localhost:3000/api/sendEmail', {method: 'POST', body: body})
-          .then(res => console.log(res))
+          .then(res => setsuccessfullySent(true))
           .catch(err => console.log(err))
 
     }
 
   return (
   <div className="w-100 lg:w-2/3 mx-auto">
+    <h2 className="text-4xl font-black text-center mb-8">Send us a message</h2>
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col">
@@ -87,6 +87,7 @@ export default function ContactForm () {
           Contact us
         </button>
       </div>
+      <div className="text-s text-center text-white bg-green-500 p-2 rounded">{successfullySent ? "Thank you!" : ""}</div>
     </form>
   </div>
 );

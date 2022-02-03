@@ -10,7 +10,7 @@ const NavItem = ({href, label}: {href: string, label: string}) => {
   const pageName = href.substr(1)
   return (
   <Link href={href}>
-  <a className={`${router.query.page == pageName ? "bg-green-100" : ""} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white`}>
+  <a className={`${router.query.page == pageName ? "bg-green-50" : ""} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-green-600 hover:text-white`}>
     {label}
   </a>
   </Link>)
