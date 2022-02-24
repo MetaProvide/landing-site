@@ -85,6 +85,8 @@ section {
 .image-wrapper {
   width: 100%;
   margin-top: 64px;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .logo-wrapper {
@@ -160,15 +162,27 @@ section {
 }
 
 input[type="text"] {
-  padding: 8px 12px;
-  font-size: 1.2rem;
-  border: 1px solid black;
-  border-radius: 7px;
+  padding: 8px 12px !important;
+  font-size: 1.2rem !important;
+  border: 1px solid black !important;
+  border-radius: 7px !important;
 }
 
 input[type="text"]:focus {
-  outline: var(--primary-color) solid 1px;
+  outline: var(--primary-color) solid 1px !important;
 }
+
+textarea {
+  padding: 8px 12px !important;
+  font-size: 1.2rem !important;
+  border: 1px solid black !important;
+  border-radius: 7px !important;
+}
+
+textarea:focus {
+  outline: var(--primary-color) solid 1px !important;
+}
+
 
 button {
   background-color: var(--primary-color);
