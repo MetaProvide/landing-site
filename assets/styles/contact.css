@@ -1,0 +1,18 @@
+.form-text {
+  color: var(--grey-600-color);
+}
+
+#sib-form-container {
+  width: 600px;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif !important;
+}
+
+#sib-container {
+  width: 100%;
+  padding: 0;
+}
+
+.sib-form {
+  padding: 0;
+}
