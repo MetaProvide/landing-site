@@ -16,3 +16,14 @@
 .sib-form {
   padding: 0;
 }
+
+.form-feedback-wrapper {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: var(--grey-500-color) !important;
+}
