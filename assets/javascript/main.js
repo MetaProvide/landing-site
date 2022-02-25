@@ -17,7 +17,7 @@ function main(_) {
   const navListCheckBoxEl = document.querySelector("nav .checkbox");
   const navListEl = document.querySelector(".nav-list");
   const hamburgerEl = document.querySelector(".hamburger-lines");
-  const formEl = document.querySelector('#sib-form');
+  const newLetterformEl = document.querySelector('#sib-form');
   const submitButtonEl = document.querySelector('#submit-button');
 
   if (isVisible(hamburgerEl) && navListEl) {
@@ -26,8 +26,9 @@ function main(_) {
     });
   }
 
-  if (formEl) {
-    formEl.addEventListener('input', (_) => {
+  // Validates input on newsletter subscription
+  if (newLetterformEl) {
+    newLetterformEl.addEventListener('input', (_) => {
       const isAgreedToTerms = formEl.elements["OPT_IN"].checked
       const isValidEmail = validateEmail(formEl.elements["EMAIL"].value);
 
