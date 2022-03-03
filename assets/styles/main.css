@@ -356,4 +356,13 @@ nav .checkbox {
     align-items: center;
     margin-bottom: 48px;
   }
+
+  .areas-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .area-card {
+    margin-bottom: 64px;
+  }
 }
