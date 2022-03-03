@@ -89,6 +89,10 @@ section {
   margin-bottom: 32px;
 }
 
+.image-wrapper img {
+  width: 75%;
+}
+
 .logo-wrapper {
   display: flex;
   justify-content: center;
@@ -364,5 +368,9 @@ nav .checkbox {
 
   .area-card {
     margin-bottom: 64px;
+  }
+
+  .img-wrapper img {
+    width: 80%;
   }
 }
