@@ -27,7 +27,7 @@ h1 {
   text-align: center;
   margin: 24px;
   font-size: 32px;
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 nav {
@@ -120,7 +120,7 @@ section {
 
 .area-card {
   width: 200px;
-  height: 320px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
