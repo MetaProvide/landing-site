@@ -232,6 +232,11 @@ button {
   border-radius: 7px;
 }
 
+button:disabled,
+button[disabled] {
+  opacity: 0.8;
+}
+
 nav .checkbox {
   display: none;
 }
