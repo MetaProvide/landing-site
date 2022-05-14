@@ -13,6 +13,12 @@
       href="https://sibforms.com/forms/end-form/build/sib-styles.css"
     />
     <link rel="stylesheet" href="assets/styles/contact.css" />
+    <style>
+       .wave svg {
+        width: calc(166% + 1.5px);
+        height: 147px;
+      }
+    </style>
     <script src="assets/javascript/main.js" defer></script>
   </head>
   <body>
@@ -25,47 +31,47 @@
       </div>
       <ul class="nav-list">
         <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="adminly.html">Adminly</a></li>
-        <li class="nav-item"><a href="metafriend.html">MetaFriend</a></li>
-        <li class="nav-item"><a href="metaland.html">MetaLand</a></li>
+        <li class="nav-item"><a href="areas.html">Areas</a></li>
         <li class="nav-item"><a href="team.html">Team</a></li>
         <li class="nav-item"><a href="contribute.html">Contribute</a></li>
         <li class="nav-item"><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <main>
-      <div class="logo-wrapper">
-        <img class="mtb-64" src="./assets/images/metaprovide.png" alt="MetaProvide logotype" />
-      </div>
-      <p>
-        Is it possible to create a successful organisation focused on building
-        services for a commercial market, which is not driven by greed but
-        motivated by supporting goodness? We not only believe so, but are here
-        to prove it.
-      </p>
-      <p>
-        We are a team of programmers, product developers, administrators,
-        communicators, and a former Buddhist monk that started it all. We are
-        here to make a difference, through the services that we’re building.
-      </p>
-      <p>
-        Motivated by core values of kindness, integrity, trustworthiness and
-        sustainability, we are aiming to make business more efficient for
-        providers of health and wellbeing services. Additionally, we want to
-        support individuals exploring what can make them grow as people. Last
-        but not least, we also wish to develop land for co-working/co-living and
-        contemplation, where people and nature sustainably can coexist.
-      </p>
-      <p>
-        We are MetaProvide, and step by step we are making our vision a reality.
-        We are also excited that we get to tell you about it, so please explore
-        our three areas of focus for supporting goodness
-      </p>
+      <section>
+        <div class="logo-wrapper">
+          <img class="mtb-64" src="./assets/images/metaprovide.png" alt="MetaProvide logotype" />
+        </div>
+        <p>
+          Is it possible to create a successful organisation focused on building
+          services for a commercial market, which is not driven by greed but
+          motivated by supporting goodness? We not only believe so, but are here
+          to prove it.
+        </p>
+        <p>
+          We are a team of programmers, product developers, administrators,
+          communicators, and a former Buddhist monk that started it all. We are
+          here to make a difference, through the services that we’re building.
+        </p>
+        <p>
+          Motivated by core values of kindness, integrity, trustworthiness and
+          sustainability, we are aiming to make business more efficient for
+          providers of health and wellbeing services. Additionally, we want to
+          support individuals exploring what can make them grow as people. Last
+          but not least, we also wish to develop land for co-working/co-living and
+          contemplation, where people and nature sustainably can coexist.
+        </p>
+        <p>
+          We are MetaProvide, and step by step we are making our vision a reality.
+          We are also excited that we get to tell you about it, so please explore
+          our three areas of focus for supporting goodness.
+        </p>
+      </section>
         
       <h1>Our Areas</h1>
       <section class="areas-wrapper">
         <div class="area-card">
-          <a href="adminly.html">
+          <a href="areas.html#adminly">
           <img src="./assets/images/adminly.png" alt="Adminly logotype" />
           </a>
           <div>
@@ -73,11 +79,11 @@
               Adminly is our service to help wellbeing providers with their
               administrative tasks using human care and digital automation.
             </p>
-            <a href="adminly.html">Learn More</a>
+            <a href="areas.html#adminly">Learn More</a>
           </div>
         </div>
         <div class="area-card">
-          <a href="metafriend.html">
+          <a href="areas.html#metafriend">
           <img
             src="./assets/images/metafriend.png"
             alt="MetaFriend placeholder logotype"
@@ -89,7 +95,7 @@
               providers to offer the right support at the right time,
               free-of-charge.
             </p>
-            <a href="metafriend.html">Learn More</a>
+            <a href="areas.html#metafriend">Learn More</a>
           </div>
         </div>
         <div class="area-card">
@@ -111,6 +117,7 @@
       
       <!-- SENDINBLUE FORM -->
       <section id="newsletter-section"> 
+        <h1>Newsletter</h1>
         <div id="sib-form-container" class="sib-form-container">
         <div
           id="sib-container"
@@ -124,17 +131,6 @@
             id="sib-form"
             action=""
           >
-              <div
-                class="sib-form-block"
-                style="
-                  text-align: left;
-                  font-weight: 700;
-                  color: #3c4858;
-                  background-color: transparent;
-                "
-              >
-                <h1>Newsletter</h1>
-              </div>
               <div class="form-feedback-wrapper">
               <div id="error-message" class="sib-form-message-panel" style="width: auto;font-size:16px; text-align:left; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
                 <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
@@ -153,7 +149,7 @@
                   </svg>
                   <span class="sib-form-message-panel__inner-text">
                                     Your subscription has been successful.
-                                </span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -452,6 +448,11 @@
       <!-- End Sendinblue Form -->
     </section>
     </main>
+    <footer class="wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+  </footer>
   
 <script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';

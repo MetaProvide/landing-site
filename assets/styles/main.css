@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
 
 :root {
-  --primary-color: rgb(106, 126, 40); /*6A7E28*/
+  --primary-color: rgb(106, 126, 40); 
   --secondary-color: rgb(147, 142, 110);
   --website-max-width: 896px;
   --content-max-width: 720px;
@@ -21,6 +21,29 @@ body {
   font-family: "Lato", sans-serif;
   color: var(--grey-900-color);
   font-size: 16px;
+  padding-bottom: 64px;
+  position: relative;
+}
+
+.wave {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+overflow: hidden;
+line-height: 0;
+}
+
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(118% + 1.3px);
+  height: 130px;
+}
+
+.wave .shape-fill {
+  fill: #6A7E28A8;
 }
 
 h1 {
@@ -35,7 +58,7 @@ nav {
   justify-content: space-between;
   margin: 8px auto;
   padding: 8px 0px;
-  max-width: var(--website-max-width) ;
+  max-width: var(--content-max-width) ;
 }
 
 .nav-list {
@@ -80,6 +103,7 @@ main {
 
 section {
   width: 100%;
+  margin-bottom: 84px;
 }
 
 .image-wrapper {
@@ -120,7 +144,6 @@ section {
 
 .area-card {
   width: 200px;
-  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,13 +152,10 @@ section {
 
 .area-card p {
   margin-top: 0px;
+  margin-bottom: 24px;
 }
 
 .area-card div {
-  height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   text-align: center;
 }
 
