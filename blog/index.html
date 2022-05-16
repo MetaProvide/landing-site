@@ -4,26 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MetaProvide: Blog Page</title>
-    <meta name="description" content="Follow MetaProvide to make wellbeing support more accessible">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <meta
+      name="description"
+      content="Follow MetaProvide to make wellbeing support more accessible"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
     <link rel="stylesheet" href="../assets/styles/main.css" />
-    <link rel="stylesheet" href="../assets/styles/contact.css" />
+    <link rel="stylesheet" href="../assets/styles/modal.css" />
     <style>
-       .wave svg {
+      .wave svg {
         width: calc(166% + 1.5px);
         height: 167px;
       }
     </style>
+    <script src="../assets/javascript/main.js" defer></script>
     <script defer>
-      const post = "../assets/posts/newsletter_2022-05.md"
+      const post = "../assets/posts/newsletter_2022-05.md";
       async function run() {
-        let file = await fetch(post)
-        let text = await file.text()
-        document.getElementById('content').innerHTML =
-          marked.parse(text);
+        let file = await fetch(post);
+        let text = await file.text();
+        document.getElementById("content").innerHTML = marked.parse(text);
       }
-      run()
+      run();
     </script>
   </head>
   <body>
@@ -40,42 +43,73 @@
         <li class="nav-item"><a href="../team.html">Team</a></li>
         <li class="nav-item"><a href="../contribute.html">Contribute</a></li>
         <li class="nav-item"><a href="../contact.html">Contact</a></li>
+        <li class="nav-item"><a href="./index.html">Blog</a></li>
+        <li class="nav-item"><a id="donationButton" class="btn">Donate</a></li>
       </ul>
     </nav>
     <main>
-      
       <div id="content"></div>
       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-      <script>
-        document.getElementById('content').innerHTML =
-          marked.parse('# Marked in the browser\n\nRendered by **marked**.');
-      </script>
-        
     </main>
+            <!-- The Modal -->
+            <div id="donationModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Donation Methods</h1>
+                <p>
+                  Thank you for your interest in supporting our vision, just the fact that you are
+                  here reading this motivates us even more to ensure the success of
+                  MetaProvide!
+                </p>
+                <hr>
+                <section class="donation-option">
+                  <h2>Paypal</h2>
+                  <img id="donate-paypal-image" src="../assets/images/QR-paypal.png"/>
+                  <div id="donate-paypal">
+                  </div>
+                </section>
+                <section class="donation-option">
+                  <h2>Bitcoin</h2>
+                  <div id="donate-bitcoin">
+                  </div>
+                  <p>bc1qvmuxes6g9fcpwp8yv0ull38zjvl0p9uuy8k4r5</p>
+                </section>
+                <section class="donation-option">
+                  <h2>Ether</h2>
+                  <div id="donate-ether">
+                  </div>
+                  <p>0xD6158881393BC572FB368Be1f7C8e1Aae39670dF</p>
+                </section>
+                <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                <script>
+                  const paypalButton = PayPal.Donation.Button({
+                  env:'production',
+                  hosted_button_id:'3HFUP3W8SP2JA',
+                  image: {
+                    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+                    alt:'Donate with PayPal button',
+                    title:'PayPal - The safer, easier way to pay online!',
+                  }
+                  })
+                  paypalButton.render('#donate-paypal');
+                </script>
+              </div>
+        
+            </div> 
     <footer class="wave">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"
+        ></path>
       </svg>
-  </footer>
-  
-<script>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-  window.LOCALE = 'en';
-  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-  window.GENERIC_INVALID_MESSAGE = "The email provided is invalid.";
-  window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
-
-  window.translation = {
-    common: {
-      selectedList: '{quantity} list selected',
-      selectedLists: '{quantity} lists selected'
-    }
-  };
-
-  var AUTOHIDE = Boolean(0);
-</script>
-  <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
-
+    </footer>
   </body>
 </html>

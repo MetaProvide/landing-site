@@ -12,7 +12,9 @@ Our mission can be summed up in a rather long less-than-catchy sentence:
 
 Not ***entirely*** clear? Fair enough. Sometimes a video helps.
 
-[imbed Adminly cartoon with Quinn. Video is here: <https://space.metaprovide.org/f/680866> ]
+<div class="video-wrapper">
+   <video src="https://space.metaprovide.org/s/yrimoQExa6msdJN/download" preload="metadata" controls muted="muted" controlslist="nodownload" poster="../assets/images/adminly-poster.png"></video>
+</div>
 
 ---
 
@@ -74,7 +76,7 @@ To ensure Adminly is tailored for the specific needs of well-being providers, ou
 
 As promised, here's a glimpse at the administrative tasks platform designed with providers front and center.
 
-![Adminly Prototype Dashboard.jpg](Draft%20Blogs/Adminly%20Prototype%20Dashboard.jpg?fileId=677324#mimetype=image%2Fjpeg&hasPreview=true)
+![Adminly Prototype Dashboard.jpg](../assets/images/adminly-prototype-dashboard.jpg)
 
 A key part of this testing phase involved the in-depth research and personalized-support of virtual assistants carefully matched with our providers. Here's what some of our providers have to say about their experience with developing Adminly:
 
@@ -92,7 +94,7 @@ A key part of this testing phase involved the in-depth research and personalized
 
 If you don't have time to read these lovely quotes, a picture does say a thousand words. Just look at these smiles!
 
-![Stephan Pende.jpg](Draft%20Blogs/Stephan%20Pende.jpg?fileId=677332#mimetype=image%2Fjpeg&hasPreview=true)
+![Stephan Pende.jpg](../assets/images/stephan-pende.jpg)
 
 ---
 
@@ -104,7 +106,7 @@ The sincere curiosity, insightful conversations, challenging questions and unwav
 
 MetaProvide has experienced incredible growth this year. Our HR hero, Marcela, has concentrated much of her time on recruitment with five new positions identified, approved, and successfully filled. So we are currently comprised of sixteen developers, two advisors (Tan Ariyo and Martin J) and five people on the board (including our deputees Rolf and Anna).
 
-![MetaMeeting](TemporaryPlaceholder.png)
+![MetaMeeting](../assets/images/all-team-talk.png)
 
 ### Strengthening our structure
 
@@ -138,4 +140,4 @@ To discuss the different ways in which you can contribute, please contact Philec
 
 Thank you again for joining the movement at MetaProvide of making a positive difference in the lives of many…one person and one organization at a time.
 
-[Imbed a donations button]
+<div style="display: flex; justify-content: center;"><a id="donationButton" class="btn">Donate</a></div>
