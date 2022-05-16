@@ -140,4 +140,4 @@ To discuss the different ways in which you can contribute, please contact Philec
 
 Thank you again for joining the movement at MetaProvide of making a positive difference in the lives of many…one person and one organization at a time.
 
-<div style="display: flex; justify-content: center;"><a id="donationButton" class="btn">Donate</a></div>
+<div style="display: flex; justify-content: center;"><a class="btn donationButton">Donate</a></div>

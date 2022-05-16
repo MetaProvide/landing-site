@@ -97,13 +97,13 @@ function handleNewsletterSubmit(ev) {
   );
 }
 
-function setupModal(modalEL, openerEl, closerEl) {
+function setupModal(modalEL, openerEls, closerEl) {
   function openModal(_) {
-    console.log("abc")
     modalEL.style.display = "block";
   }
-  openerEl.onclick = openModal;
+  Array.from(openerEls).forEach(el => el.onclick = openModal);
 
+  console.log('a,', openerEls)
   function closeModal() {
     modalEL.style.display = "none";
   }
@@ -127,9 +127,9 @@ function main(_) {
 
   // Modal
   const modalEl = document.getElementById("donationModal");
-  const modelOpenerEl = document.getElementById("donationButton");
+  const modelOpenerEls = document.getElementsByClassName("donationButton");
   const modelCloserEl = document.getElementsByClassName("close")[0];
-  setupModal(modalEl, modelOpenerEl, modelCloserEl);
+  setupModal(modalEl, modelOpenerEls, modelCloserEl);
 
   // Trigger hamburger menu open/close
   if (isVisible(hamburgerEl) && navListEl) {
