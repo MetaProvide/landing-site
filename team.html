@@ -7,6 +7,7 @@
     <meta name="description" content="See the people behind MetaProvide">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/paypal.css" />
     <script src="assets/javascript/main.js" defer></script>
   </head>
   <body>
@@ -26,6 +27,9 @@
         <li class="nav-item"><a href="contribute.html">Contribute</a></li>
         <li class="nav-item"><a href="contact.html">Contact</a></li>
       </ul>
+      <div id="donate-button-container">
+        <div id="donate-button"></div>
+      </div>
     </nav>
     <main>
       <div class="logo-wrapper">
@@ -159,5 +163,17 @@
         </div>
       </section>
     </main>
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+  <script>
+    PayPal.Donation.Button({
+    env:'production',
+    hosted_button_id:'3HFUP3W8SP2JA',
+    image: {
+    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+    alt:'Donate with PayPal button',
+    title:'PayPal - The safer, easier way to pay online!',
+    }
+    }).render('#donate-button');
+  </script>
   </body>
 </html>

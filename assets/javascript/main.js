@@ -92,7 +92,6 @@ function main(_) {
   const contactFormEl = document.querySelector("#contact-section form");
   const submitButtonEl = document.querySelector("#submit-button");
   
-  console.log(contactFormEl);
   // Trigger hamburger menu open/close
   if (isVisible(hamburgerEl) && navListEl) {
     navListCheckBoxEl.addEventListener("click", (_) => {
@@ -128,6 +127,11 @@ function main(_) {
       submitButtonEl.disabled = !(isValidEmail && isAcceptedEmail && isAccpetedMessage );
     });
   }
+
+  // Generate QR codes for crypto
+  new QRCode(document.querySelector('#donate-bitcoin'), "bc1qvmuxes6g9fcpwp8yv0ull38zjvl0p9uuy8k4r5");
+  new QRCode(document.querySelector('#donate-ether'), "0xD6158881393BC572FB368Be1f7C8e1Aae39670dF");
+
 }
 
 window.addEventListener("DOMContentLoaded", main);

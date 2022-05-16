@@ -8,6 +8,7 @@
   <meta name="description" content="Join MetaProvide to help others help more">
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/styles/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/javascript/main.js" defer></script>
 </head>
 
@@ -28,6 +29,9 @@
       <li class="nav-item"><a href="contribute.html">Contribute</a></li>
       <li class="nav-item"><a href="contact.html">Contact</a></li>
     </ul>
+    <div id="donate-button-container">
+      <div id="donate-button"></div>
+    </div>
   </nav>
   <main>
     <div class="image-wrapper">
@@ -54,12 +58,52 @@
       MetaProvide!
     </p>
 
-    <h1>Open positions</h1>
+    <h1>Contribute by Attention</h1>
     <p>
-      Nothing here, but we are always looking for highly motivated people.
-      <a href="contact.html#contact-form">Send us a message</a>
+      Currently we are in need more of new wellbeing providers who wants to give us feedback on our alpha version of <a href="adminly.html">Adminly</a>. 
+      Also if you feel inspired of what we are doing and would like to dedicate more than 20 hours a week <a href="contact.html#contact-form">Send us a message</a> to explore collaboration!
     </p>
+
+    <h1>Contribute by Crypto</h1>
+    <p>To make our dream possible we need funds and we do accept crypto. Below you can find all of our options to donate.</p>
+
+    <section class="donation-option">
+      <h3>Bitcoin</h3>
+      <div id="donate-bitcoin">
+
+      </div>
+      <p>bc1qvmuxes6g9fcpwp8yv0ull38zjvl0p9uuy8k4r5</p>
+    </section>
+    <section class="donation-option">
+      <h3>Ethereum (ether)</h3>
+      <div id="donate-ether">
+
+      </div>
+      <p>0xD6158881393BC572FB368Be1f7C8e1Aae39670dF</p>
+    </section>
+    <section class="donation-option">
+      <h3>Paypal</h3>
+      <div id="donate-paypal">
+
+      </div>
+      <p>0xD6158881393BC572FB368Be1f7C8e1Aae39670dF</p>
+    </section>
+
   </main>
+  <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+  <script>
+    const paypalButton = PayPal.Donation.Button({
+    env:'production',
+    hosted_button_id:'3HFUP3W8SP2JA',
+    image: {
+    src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+    alt:'Donate with PayPal button',
+    title:'PayPal - The safer, easier way to pay online!',
+    }
+    })
+    paypalButton.render('#donate-button');
+    paypalButton.render('#donate-paypal');
+  </script>
 </body>
 
 </html>
