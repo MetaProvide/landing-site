@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetaProvide: Blog Page</title>
+    <meta name="description" content="Follow MetaProvide to make wellbeing support more accessible">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <link rel="stylesheet" href="../assets/styles/contact.css" />
+    <style>
+       .wave svg {
+        width: calc(166% + 1.5px);
+        height: 167px;
+      }
+    </style>
+    <script defer>
+      const post = "../assets/posts/newsletter_2022-05.md"
+      async function run() {
+        let file = await fetch(post)
+        let text = await file.text()
+        document.getElementById('content').innerHTML =
+          marked.parse(text);
+      }
+      run()
+    </script>
+  </head>
+  <body>
+    <nav>
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="../areas.html">Areas</a></li>
+        <li class="nav-item"><a href="../team.html">Team</a></li>
+        <li class="nav-item"><a href="../contribute.html">Contribute</a></li>
+        <li class="nav-item"><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      
+      <div id="content"></div>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script>
+        document.getElementById('content').innerHTML =
+          marked.parse('# Marked in the browser\n\nRendered by **marked**.');
+      </script>
+        
+    </main>
+    <footer class="wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+  </footer>
+  
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
+  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
+  window.GENERIC_INVALID_MESSAGE = "The email provided is invalid.";
+  window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
+
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected'
+    }
+  };
+
+  var AUTOHIDE = Boolean(0);
+</script>
+  <script src="https://sibforms.com/forms/end-form/build/main.js"></script>
+
+  </body>
+</html>
