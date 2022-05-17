@@ -115,7 +115,7 @@ None of this would be possible without the many talents of Henry, Magnus, Igor a
 
 ### Investing in our future
 
-To date, over 400,000€ has been contributed to MetaProvide in the form of membership fees. Last autumn, we also received a membership contribution of 5 ETH. An infrastructure has since been created to easily and transparently accept cryptocurrencies, both for donations [hyperlink to donations page] and membership contributions.
+To date, over 400,000€ has been contributed to MetaProvide in the form of membership fees. Last autumn, we also received a membership contribution of 5 ETH. An infrastructure has since been created to easily and transparently accept cryptocurrencies, both for donations and membership contributions.
 
 ---
 
