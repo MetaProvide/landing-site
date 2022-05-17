@@ -133,7 +133,7 @@ As a result of this effort, a tangible WEB3.0 product is on the rise. Through so
 
 ## Can you support our well-being mission?
 
-Today, we are asking for your [financial support](URL to donation page) to help us further the mission through our products (Adminly and MetaFriend) and MetaLand (our future place of “refuge”).
+Today, we are asking for your financial support to help us further the mission through our products (Adminly and MetaFriend) and MetaLand (our future place of “refuge”).
 
 To discuss the different ways in which you can contribute, please contact Philecia M. McCain, Fundraising Manager at [philecia.mccain@metaprovide.org](mailto:philecia.mccain@metaprovide.org).
 
