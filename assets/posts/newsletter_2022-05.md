@@ -4,21 +4,20 @@
 
 Welcome to our very first blog post on this humble homepage. We are a start-up not-for-profit in the well-being sector.
 
-You’ll soon read about our most recent [achievements](#recent-achievements)and how we’re accelerating towards further developments on the horizon [hyperlink to the horizon section of the blog]. But before we delve into these exciting updates, let’s begin with a brief introduction of who we are, our aspirations, and how we intend to get there.
+You’ll soon read about our most recent [achievements](#recent-achievements)and how we’re accelerating towards further developments on the [horizon](#on-our-horizon). But before we delve into these exciting updates, let’s begin with a brief introduction of who we are, our aspirations, and how we intend to get there.
 
 Our mission can be summed up in a rather long less-than-catchy sentence:
 
 > MetaProvide brings goodness to the world by developing administrative wellbeing-services; through innovative IT and supportive human interaction.
 
-Not ***entirely*** clear? Fair enough. Sometimes a video helps.
-
+Not ***entirely clear***? Fair enough. Sometimes a video helps. This one describe our service Adminly.
 <div class="video-wrapper">
    <video src="https://space.metaprovide.org/s/yrimoQExa6msdJN/download" preload="metadata" controls muted="muted" controlslist="nodownload" poster="../assets/images/adminly-poster.png"></video>
 </div>
 
 ---
 
-## So is MetaProvide connected to Facebook?
+### So is MetaProvide connected to Facebook?
 
 ***No! Absolutely not.*** The similarities in name are...unfortunate, to say the least. We are completely opposed to data-mining for profit and that's part of the reason we're creating a platform for well-being providers and explorers to safely connect.
 
@@ -45,10 +44,10 @@ We are building services for the commercial market, but with a deep commitment t
    A web-based all-in-one administrative tasks platform, designed specifically for well-being providers, with personalized support from virtual assistants.
 2. [MetaFriend](https://metaprovide.org/metafriend.html)
 
-   An entirely free service to connect well-being explorers with vetted providers, according to their >> individual needs and aspirations.
+   An entirely free service to connect well-being explorers with vetted providers, according to their individual needs and aspirations.
 3. [MetaLand](https://metaprovide.org/metaland.html)
 
-   Our bit of land in the Portuguese country-side for harmonizing multi-disciplinary approaches to well-> being through permaculture, tech-labs and meditation huts.
+   Our bit of land in the Portuguese country-side for harmonizing multi-disciplinary approaches to well being through permaculture, tech-labs and meditation huts.
 
 ### When will these services be available?
 
@@ -72,7 +71,7 @@ We are here to make a positive difference by building services that address thes
 
 ***Adminly aims to help people help more.***
 
-To ensure Adminly is tailored for the specific needs of well-being providers, our [product team](hyperlink to product team profiles, if possible to add subcategories on About Us page) has been working closely with them throughout the development process. The collective diligence of the product team has resulted in considerable progress and proven beneficial for our dear providers involved in the testing phase.
+To ensure Adminly is tailored for the specific needs of well-being providers, our [product team](../team.html) has been working closely with them throughout the development process. The collective diligence of the product team has resulted in considerable progress and proven beneficial for our dear providers involved in the testing phase.
 
 As promised, here's a glimpse at the administrative tasks platform designed with providers front and center.
 
