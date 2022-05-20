@@ -99,11 +99,11 @@ function handleNewsletterSubmit(ev) {
 
 function setupModal(modalEL, openerEls, closerEl) {
   function openModal(_) {
+    console.log("openModal called", modalEL);
     modalEL.style.display = "block";
   }
   Array.from(openerEls).forEach(el => el.onclick = openModal);
 
-  console.log('a,', openerEls)
   function closeModal() {
     modalEL.style.display = "none";
   }
