@@ -199,6 +199,19 @@ video {
   width: 100%;
 }
 
+.posts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.posts-list-item {
+  text-align: center;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+
 .team-presentation-section {
   max-width: 600px;
   margin: 0 auto;
