@@ -429,6 +429,10 @@ nav .checkbox {
     margin-bottom: 48px;
   }
 
+  .team-member-info {
+    max-width: 85%;
+  } 
+
   .team-member-card:nth-child(2n+1) {
     flex-direction: column;
     align-items: center;
