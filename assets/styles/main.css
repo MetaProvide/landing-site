@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
 
 :root {
-  --primary-color: rgb(106, 126, 40); 
-  --secondary-color: rgb(147, 142, 110);
+  --primary-color: rgb(95, 206, 129); 
+  --secondary-color: rgb(55, 61, 199);
   --website-max-width: 896px;
   --content-max-width: 720px;
   --grey-900-color: #26262e;
@@ -43,7 +43,7 @@ line-height: 0;
 }
 
 .wave .shape-fill {
-  fill: #6A7E28A8;
+  fill: var(--primary-color);
 }
 
 h1 {
@@ -308,6 +308,24 @@ button[disabled] {
 
 nav .checkbox {
   display: none;
+}
+
+.error-message {
+  font-size: 16px;
+  text-align: left;
+  color: #661d1d;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  border-color: #ff4949;
+}
+
+#submit-button {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--primary-color);
+  border-radius: 7px;
 }
 
 @media (max-width: 640px) {
