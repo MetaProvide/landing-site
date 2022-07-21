@@ -50,7 +50,7 @@ We are building services for the commercial market, but with a deep commitment t
 
 ### When will these services be available?
 
-We are thrilled to launch Adminly in August this year (*keep reading for a sneak peak at our platform*)! In 2023 we will offer MetaFriend and begin developing MetaLand.
+We are thrilled to launch Adminly in end of this year (*keep reading for a sneak peak at our platform*)! In 2023 we will offer MetaFriend and begin developing MetaLand.
 
 ### Why are we on this mission?
 
