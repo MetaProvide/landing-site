@@ -97,50 +97,10 @@ function handleNewsletterSubmit(ev) {
   );
 }
 
-function setupModal(modalEL, openerEls, closerEl) {
-  function openModal(_) {
-    console.log("openModal called", modalEL);
-    modalEL.style.display = "block";
-  }
-  Array.from(openerEls).forEach(el => el.onclick = openModal);
-
-  function closeModal() {
-    modalEL.style.display = "none";
-  }
-  closerEl.onclick = closeModal;
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modalEL) {
-      modal.style.display = "none";
-    }
-  };
-}
-
 function main(_) {
-  const navListCheckBoxEl = document.querySelector("nav .checkbox");
-  const navListEl = document.querySelector(".nav-list");
-  const hamburgerEl = document.querySelector(".hamburger-lines");
   const newsletterFormEl = document.querySelector("#newsletter-section form");
   const contactFormEl = document.querySelector("#contact-section form");
   const submitButtonEl = document.querySelector("#submit-button");
-
-  // Modal
-  const modalEl = document.getElementById("donationModal");
-  const modelOpenerEls = document.getElementsByClassName("donationButton");
-  const modelCloserEl = document.getElementsByClassName("close")[0];
-  setupModal(modalEl, modelOpenerEls, modelCloserEl);
-
-  // Trigger hamburger menu open/close
-  if (isVisible(hamburgerEl) && navListEl) {
-    navListCheckBoxEl.addEventListener("click", (_) => {
-      navListEl.classList.toggle("open");
-    });
-  }
-
-  // QR Codes for Crypto Donation
-  new QRCode(document.querySelector('#donate-bitcoin'), "bc1qvmuxes6g9fcpwp8yv0ull38zjvl0p9uuy8k4r5");
-  new QRCode(document.querySelector('#donate-ether'), "0xD6158881393BC572FB368Be1f7C8e1Aae39670dF");
 
   // Validates input on newsletter subscription
   if (newsletterFormEl) {

@@ -7,11 +7,6 @@ async function render() {
 
 async function renderBlogPost() {
     await render();
-    // Modal
-    const modalEl = document.getElementById("donationModal");
-    const modelOpenerEls = document.getElementsByClassName("donationButton");
-    const modelCloserEl = document.getElementsByClassName("close")[0];
-    setupModal(modalEl, modelOpenerEls, modelCloserEl);
 }
 
 window.addEventListener('load', renderBlogPost);

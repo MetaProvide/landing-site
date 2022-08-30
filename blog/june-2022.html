@@ -11,7 +11,6 @@
     <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
     <link rel="stylesheet" href="../assets/styles/main.css" />
-    <link rel="stylesheet" href="../assets/styles/modal.css" />
     <style>
       .wave svg {
         width: calc(166% + 1.5px);
@@ -42,7 +41,6 @@
         <li class="nav-item"><a href="../participate.html">Participate</a></li>
         <li class="nav-item"><a href="../contact.html">Contact</a></li>
         <li class="nav-item"><a href="./index.html">Blog</a></li>
-        <li class="nav-item"><a class="btn donationButton">Donate</a></li>
       </ul>
     </nav>
     <main>
@@ -400,55 +398,8 @@
         positive difference in the lives of many…one person and one organization
         at a time.
       </p>
-      <div style="display: flex; justify-content: center">
-        <a class="btn donationButton">Donate</a>
-      </div>
+
     </main>
-    <!-- The Modal -->
-    <div id="donationModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h1>Donation Methods</h1>
-        <p>
-          Thank you for your interest in supporting our vision, just the fact
-          that you are here reading this motivates us even more to ensure the
-          success of MetaProvide!
-        </p>
-        <hr />
-        <section class="donation-option">
-          <h2>Paypal</h2>
-          <img id="donate-paypal-image" src="../assets/images/QR-paypal.png" />
-          <div id="donate-paypal"></div>
-        </section>
-        <section class="donation-option">
-          <h2>Bitcoin</h2>
-          <div id="donate-bitcoin"></div>
-          <p>bc1qvmuxes6g9fcpwp8yv0ull38zjvl0p9uuy8k4r5</p>
-        </section>
-        <section class="donation-option">
-          <h2>Ether</h2>
-          <div id="donate-ether"></div>
-          <p>0xD6158881393BC572FB368Be1f7C8e1Aae39670dF</p>
-        </section>
-        <script
-          src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
-          charset="UTF-8"
-        ></script>
-        <script>
-          const paypalButton = PayPal.Donation.Button({
-            env: "production",
-            hosted_button_id: "3HFUP3W8SP2JA",
-            image: {
-              src: "https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif",
-              alt: "Donate with PayPal button",
-              title: "PayPal - The safer, easier way to pay online!"
-            }
-          });
-          paypalButton.render("#donate-paypal");
-        </script>
-      </div>
-    </div>
     <footer class="wave">
       <svg
         data-name="Layer 1"
