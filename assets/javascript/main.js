@@ -1,3 +1,19 @@
+// Matomo - Analytics setup
+function setupAnalytics() {
+  const _paq = (window._paq = window._paq || []);
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  const url = "//matomo.metaprovide.org/";
+  _paq.push(["setTrackerUrl", url + "matomo.php"]);
+  _paq.push(["setSiteId", "1"]);
+  const g = document.createElement("script");
+  const s = document.getElementsByTagName("script")[0];
+  g.async = true;
+  g.src = url + "matomo.js";
+  s.parentNode.insertBefore(g, s);
+}
+
 // Util functions
 function isVisible(element) {
   return element.offsetWidth > 0 && element.offsetHeight > 0;
@@ -98,9 +114,23 @@ function handleNewsletterSubmit(ev) {
 }
 
 function main(_) {
+  // Analytics
+  setupAnalytics();
+
+  // DOM Elements
+  const navListCheckBoxEl = document.querySelector("nav .checkbox");
+  const navListEl = document.querySelector(".nav-list");
+  const hamburgerEl = document.querySelector(".hamburger-lines");
   const newsletterFormEl = document.querySelector("#newsletter-section form");
   const contactFormEl = document.querySelector("#contact-section form");
   const submitButtonEl = document.querySelector("#submit-button");
+
+  // Trigger hamburger nav-menu open/close
+  if (isVisible(hamburgerEl) && navListEl) {
+    navListCheckBoxEl.addEventListener("click", (_) => {
+      navListEl.classList.toggle("open");
+    });
+  }
 
   // Validates input on newsletter subscription
   if (newsletterFormEl) {
@@ -147,3 +177,4 @@ function main(_) {
 }
 
 window.addEventListener("DOMContentLoaded", main);
+
