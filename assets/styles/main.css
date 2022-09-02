@@ -209,8 +209,27 @@ video {
   text-align: center;
   margin-top: 1rem;
   list-style: none;
+  border-bottom: 1px solid #696970;
 }
 
+.posts-list-item p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: black;
+}
+
+.posts-list-item img {
+  max-width: 60%;
+}
+
+.posts-list-item div {
+  margin: 16px auto;
+  width: 60px;
+  padding: 8px 12px;
+  font-weight: 400;
+  border-radius: 3px;
+  border: 1px solid var(--primary-color);
+}
 
 .team-presentation-section {
   max-width: 600px;
