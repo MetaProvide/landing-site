@@ -488,4 +488,8 @@ nav .checkbox {
   .img-wrapper img {
     width: 80%;
   }
+
+  .posts-list-item img {
+    max-width: 90%;
+  }
 }
