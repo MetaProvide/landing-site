@@ -24,7 +24,7 @@ Relieved to have cleared that up! Now let's answer those all-important *who, wha
 
 ### Who are we?
 
-A [diverse team](https://metaprovide.org/team.html) of programmers, product developers, administrators, communicators, business advisers, and a former Buddhist monk give life to MetaProvide. We have different backgrounds and beliefs, but share a common vision motivated by [core values](https://space.metaprovide.org/s/GMnyRJeDcPwGidD) of kindness, integrity, trustworthiness and sustainability.
+A [diverse team](https://metaprovide.org/team) of programmers, product developers, administrators, communicators, business advisers, and a former Buddhist monk give life to MetaProvide. We have different backgrounds and beliefs, but share a common vision motivated by [core values](https://space.metaprovide.org/s/GMnyRJeDcPwGidD) of kindness, integrity, trustworthiness and sustainability.
 
 ### Where are we based?
 
@@ -38,13 +38,13 @@ We are building services for the commercial market, but with a deep commitment t
 
 **Our three core projects are:**
 
-1. [Adminly](https://metaprovide.org/adminly.html)
+1. [Adminly](https://metaprovide.org/adminly)
 
    A web-based all-in-one administrative tasks platform, designed specifically for well-being providers, with personalized support from virtual assistants.
-2. [MetaFriend](https://metaprovide.org/metafriend.html)
+2. [MetaFriend](https://metaprovide.org/metafriend)
 
    An entirely free service to connect well-being explorers with vetted providers, according to their >> individual needs and aspirations.
-3. [MetaLand](https://metaprovide.org/metaland.html)
+3. [MetaLand](https://metaprovide.org/metaland)
 
    Our bit of land in the Portuguese country-side for harmonizing multi-disciplinary approaches to well-> being through permaculture, tech-labs and meditation huts.
 

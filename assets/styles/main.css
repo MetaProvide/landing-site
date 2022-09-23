@@ -159,6 +159,11 @@ video {
   align-items: center;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .logo-wrapper img {
   width: 300px;
@@ -171,6 +176,10 @@ video {
 
 .mb-32 {
   margin-bottom: 32px;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
 }
 
 .areas-wrapper {
@@ -347,6 +356,24 @@ nav .checkbox {
   border-radius: 7px;
 }
 
+.two-columns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.spread {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (max-width: 640px) {
   main {
     padding: 0px 24px;
@@ -492,4 +519,19 @@ nav .checkbox {
   .posts-list-item img {
     max-width: 90%;
   }
+
+  .two-columns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .two-columns div:first-of-type {
+    margin-bottom: 24px;
+  }
+
+  .plugin-banner {
+    width: 100% !important;
+  }
+
 }

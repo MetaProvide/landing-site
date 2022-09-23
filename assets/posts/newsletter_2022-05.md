@@ -25,7 +25,7 @@ Relieved to have cleared that up! Now let's answer those all-important *who, wha
 
 ### Who are we?
 
-A [diverse team](https://metaprovide.org/team.html) of programmers, product developers, administrators, communicators, business advisers, and a former Buddhist monk give life to MetaProvide. We have different backgrounds and beliefs, but share a common vision motivated by [core values](https://space.metaprovide.org/s/GMnyRJeDcPwGidD) of kindness, integrity, trustworthiness and sustainability.
+A [diverse team](https://metaprovide.org/team) of programmers, product developers, administrators, communicators, business advisers, and a former Buddhist monk give life to MetaProvide. We have different backgrounds and beliefs, but share a common vision motivated by [core values](https://space.metaprovide.org/s/GMnyRJeDcPwGidD) of kindness, integrity, trustworthiness and sustainability.
 
 ### Where are we based?
 
@@ -39,13 +39,13 @@ We are building services for the commercial market, but with a deep commitment t
 
 **Our three core projects are:**
 
-1. [Adminly](../areas.html#adminly)
+1. [Adminly](../areas#adminly)
 
    A web-based all-in-one administrative tasks platform, designed specifically for well-being providers, with personalized support from virtual assistants.
-2. [MetaFriend](../areas.html#metafriend)
+2. [MetaFriend](../areas#metafriend)
 
    An entirely free service to connect well-being explorers with vetted providers, according to their individual needs and aspirations.
-3. [MetaLand](../areas.html#metaland)
+3. [MetaLand](../areas#metaland)
 
    Our bit of land in the Portuguese country-side for harmonizing multi-disciplinary approaches to well being through permaculture, tech-labs and meditation huts.
 
@@ -71,7 +71,7 @@ We are here to make a positive difference by building services that address thes
 
 ***Adminly aims to help people help more.***
 
-To ensure Adminly is tailored for the specific needs of well-being providers, our [product team](../team.html) has been working closely with them throughout the development process. The collective diligence of the product team has resulted in considerable progress and proven beneficial for our dear providers involved in the testing phase.
+To ensure Adminly is tailored for the specific needs of well-being providers, our [product team](../team) has been working closely with them throughout the development process. The collective diligence of the product team has resulted in considerable progress and proven beneficial for our dear providers involved in the testing phase.
 
 As promised, here's a glimpse at the administrative tasks platform designed with providers front and center.
 

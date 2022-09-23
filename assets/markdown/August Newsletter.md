@@ -40,7 +40,7 @@ In the end, what really mattered: the unity of all those involved to reach the s
 
 ### **MetaLand: our dream and project, in physical form!**
 
-We're constantly talking about [MetaLand](https://metaprovide.org/areas.html) around here: either through our blog, website or just chatting with someone on our team. MetaLand is always in our thoughts simply because, at least until now, it is our only fully physically project.
+We're constantly talking about [MetaLand](https://metaprovide.org/areas) around here: either through our blog, website or just chatting with someone on our team. MetaLand is always in our thoughts simply because, at least until now, it is our only fully physically project.
 
 You see, MetaLand will be built on land located in a small village in central Portugal. We have big dreams for this land, focused on improving the experience of our platforms.
 
@@ -48,7 +48,7 @@ You see, MetaLand will be built on land located in a small village in central Po
 
 MetaLand has the potential to be many things for you, us and our partners. We believe that this space could mean something different to each individual, but we all share the same intention: a place to construct our community.
 
-Whether it is a place for providers to network, for explorers to find other types of help, or different people to participate in spiritual retreats, the principle objective is to create connections between people. These connections are the foundations for building our communities and involving more and more people around us.
+Whether it is a place for providers to network, for explorers to find other types of help, or different people to join in spiritual retreats, the principle objective is to create connections between people. These connections are the foundations for building our communities and involving more and more people around us.
 
 ###### *How will we build this project?*
 
