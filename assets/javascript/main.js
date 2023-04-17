@@ -142,10 +142,11 @@ function main(_) {
     const newsletterFormEl = document.querySelector("#newsletter-section form");
     const contactFormEl = document.querySelector("#contact-section form");
     const submitButtonEl = document.querySelector("#submit-button");
-
+    debugger;
     // Trigger hamburger nav-menu open/close
     if (isVisible(hamburgerEl) && navListEl) {
         navListCheckBoxEl.addEventListener("click", (_) => {
+            console.log("hello");
             navListEl.classList.toggle("open");
         });
     }
@@ -190,7 +191,7 @@ function main(_) {
     setupModal(modalEl, modelOpenerEls, modelCloserEl);
 
     // Trigger hamburger menu open/close
-    if (isVisible(hamburgerEl) && navListEl) {
+    if (hamburgerEl && navListEl) {
         navListCheckBoxEl.addEventListener("click", (_) => {
             navListEl.classList.toggle("open");
         });
