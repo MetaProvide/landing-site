@@ -142,13 +142,13 @@ function main(_) {
     const contactFormEl = document.querySelector("#contact-section form");
     const submitButtonEl = document.querySelector("#submit-button");
     
-    // Trigger hamburger nav-menu open/close
+    // Trigger hamburger menu open/close
     if (hamburgerEl && navListEl) {
         navListCheckBoxEl.addEventListener("click", (_) => {
             navListEl.classList.toggle("open");
         });
     }
-
+    
     // Validates input on newsletter subscription
     if (newsletterFormEl) {
         newsletterFormEl.addEventListener("submit", handleNewsletterSubmit);
@@ -187,13 +187,6 @@ function main(_) {
     const modelOpenerEls = document.getElementsByClassName("donationButton");
     const modelCloserEl = document.getElementsByClassName("close")[0];
     setupModal(modalEl, modelOpenerEls, modelCloserEl);
-
-    // Trigger hamburger menu open/close
-    if (hamburgerEl && navListEl) {
-        navListCheckBoxEl.addEventListener("click", (_) => {
-            navListEl.classList.toggle("open");
-        });
-    }
 
     // QR Codes for Crypto Donation
     new QRCode(
