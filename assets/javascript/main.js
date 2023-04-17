@@ -113,7 +113,6 @@ function handleNewsletterSubmit(ev) {
 
 function setupModal(modalEL, openerEls, closerEl) {
     function openModal(_) {
-        console.log("openModal called", modalEL);
         modalEL.style.display = "block";
     }
     Array.from(openerEls).forEach((el) => (el.onclick = openModal));
@@ -142,11 +141,10 @@ function main(_) {
     const newsletterFormEl = document.querySelector("#newsletter-section form");
     const contactFormEl = document.querySelector("#contact-section form");
     const submitButtonEl = document.querySelector("#submit-button");
-    debugger;
+    
     // Trigger hamburger nav-menu open/close
-    if (isVisible(hamburgerEl) && navListEl) {
+    if (hamburgerEl && navListEl) {
         navListCheckBoxEl.addEventListener("click", (_) => {
-            console.log("hello");
             navListEl.classList.toggle("open");
         });
     }
