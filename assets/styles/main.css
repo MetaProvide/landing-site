@@ -402,6 +402,10 @@ nav .checkbox {
   transform: scale(1.25);
 }
 
+.image-extra-big {
+  width: 125%;
+}
+
 .icon-button {
   display: flex;
   flex-wrap: nowrap;
@@ -578,6 +582,10 @@ nav .checkbox {
   }
 
   .app-card img {
+    width: 100%;
+  }
+
+  .image-extra-big {
     width: 100%;
   }
 }
