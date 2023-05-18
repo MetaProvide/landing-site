@@ -403,7 +403,7 @@ nav .checkbox {
 }
 
 .image-extra-big {
-  width: 125%;
+  width: min(var(--website-max-width), 95vw);
 }
 
 .icon-button {
