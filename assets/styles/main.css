@@ -402,6 +402,10 @@ nav .checkbox {
   margin-bottom: 24px;
 }
 
+.app-card-text {
+  width: 55%;
+}
+
 .app-card img {
   width: 45%;
   transform: scale(1.25);
@@ -593,6 +597,10 @@ nav .checkbox {
   }
 
   .image-extra-big {
+    width: 100%;
+  }
+
+  .app-card-text {
     width: 100%;
   }
 }
