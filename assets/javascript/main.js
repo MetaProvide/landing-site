@@ -6,14 +6,18 @@ function setupAnalytics() {
     _paq.push(['rememberConsentGiven', 24]); // hours before forget
     _paq.push(["trackPageView"]);
     _paq.push(["enableLinkTracking"]);
-    const url = "//matomo.metaprovide.org/";
-    _paq.push(["setTrackerUrl", url + "matomo.php"]);
-    _paq.push(["setSiteId", "1"]);
-    const g = document.createElement("script");
-    const s = document.getElementsByTagName("script")[0];
-    g.async = true;
-    g.src = url + "matomo.js";
-    s.parentNode.insertBefore(g, s);
+    ( 
+        () => {
+            const url = "//matomo.metaprovide.org/";
+            _paq.push(["setTrackerUrl", url + "matomo.php"]);
+            _paq.push(["setSiteId", "1"]);
+            const g = document.createElement("script");
+            const s = document.getElementsByTagName("script")[0];
+            g.async = true;
+            g.src = url + "matomo.js";
+            s.parentNode.insertBefore(g, s);
+        }
+    )();
 }
 
 // Util functions
