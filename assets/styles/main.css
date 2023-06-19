@@ -593,6 +593,7 @@ nav .checkbox {
 
   .app-card {
     flex-direction: column;
+    align-items: center;
   }
 
   .app-card img {

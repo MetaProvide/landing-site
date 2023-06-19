@@ -2,6 +2,8 @@
 function setupAnalytics() {
     const _paq = (window._paq = window._paq || []);
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['requireConsent']);
+    _paq.push(['rememberConsentGiven', 24]); // hours before forget
     _paq.push(["trackPageView"]);
     _paq.push(["enableLinkTracking"]);
     const url = "//matomo.metaprovide.org/";
