@@ -5,6 +5,13 @@
   font-style: normal; 
 }
 
+@font-face {
+  font-family: "Lato";
+  src: url('../fonts/Lato-Bold.ttf');
+  font-weight: bold;
+  font-style: bold; 
+}
+
 :root {
   --primary-color: rgb(95, 206, 129); 
   --secondary-color: rgb(55, 61, 199);
