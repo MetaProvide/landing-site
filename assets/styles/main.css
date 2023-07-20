@@ -50,6 +50,17 @@ overflow: hidden;
 line-height: 0;
 }
 
+.wave a {
+  position: relative;
+  top: 6.5rem;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
 
 .wave svg {
   position: relative;
