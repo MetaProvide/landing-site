@@ -449,6 +449,22 @@ nav .checkbox {
   margin-right: 10px;
 }
 
+/* TODO: make this work! */
+.testamonial-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testamonial-card img {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 100%;
+  margin-right: 24px;
+  margin-bottom: 32px;
+  filter: grayscale(1);
+}
+
 @media (max-width: 640px) {
   main {
     padding: 0px 24px;
