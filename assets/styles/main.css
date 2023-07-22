@@ -578,7 +578,11 @@ nav .checkbox {
     transform: rotate(-45deg);
   }
 
-  .team-member-card {
+  video {
+    width: 100%;
+  }
+
+  .team-member-card, .testamonial-card {
     flex-direction: column;
     align-items: center;
     margin-bottom: 48px;
