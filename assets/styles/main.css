@@ -1,19 +1,19 @@
 @font-face {
   font-family: "Lato";
-  src: url('../fonts/Lato-Regular.ttf');
+  src: url("../fonts/Lato-Regular.ttf");
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Lato";
-  src: url('../fonts/Lato-Bold.ttf');
+  src: url("../fonts/Lato-Bold.ttf");
   font-weight: bold;
-  font-style: bold; 
+  font-style: bold;
 }
 
 :root {
-  --primary-color:#00AD90;
+  --primary-color: #00ad90;
   --secondary-color: rgb(55, 61, 199);
   --website-max-width: 896px;
   --content-max-width: 720px;
@@ -42,12 +42,12 @@ body {
 }
 
 .wave {
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-overflow: hidden;
-line-height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .wave a {
@@ -60,7 +60,6 @@ line-height: 0;
   font-size: 0.8rem;
   z-index: 1;
 }
-
 
 .wave svg {
   position: relative;
@@ -90,7 +89,7 @@ nav {
   justify-content: space-between;
   margin: 8px auto;
   padding: 8px 0px;
-  max-width: var(--content-max-width) ;
+  max-width: var(--content-max-width);
 }
 
 .nav-list {
@@ -323,7 +322,6 @@ video {
   padding: 8px 16px;
 }
 
-
 .team-member-card:nth-child(2n + 1) {
   flex-direction: row-reverse;
 }
@@ -360,8 +358,8 @@ textarea:focus {
   outline: var(--primary-color) solid 1px !important;
 }
 
-
-button, .button {
+button,
+.button {
   background-color: var(--primary-color);
   color: white;
   font-weight: 700;
@@ -582,7 +580,8 @@ nav .checkbox {
     width: 100%;
   }
 
-  .team-member-card, .testamonial-card {
+  .team-member-card,
+  .testamonial-card {
     flex-direction: column;
     align-items: center;
     margin-bottom: 48px;
@@ -590,9 +589,9 @@ nav .checkbox {
 
   .team-member-info {
     max-width: 85%;
-  } 
+  }
 
-  .team-member-card:nth-child(2n+1) {
+  .team-member-card:nth-child(2n + 1) {
     flex-direction: column;
     align-items: center;
     margin-bottom: 48px;
@@ -638,16 +637,10 @@ nav .checkbox {
     width: 100%;
   }
 
-  .image-extra-big {
-    width: 100%;
-  }
-
   .app-card-text {
     width: 100%;
   }
 }
-
-
 
 /* modal */
 /* The Modal (background) */
@@ -713,7 +706,6 @@ nav .checkbox {
   font-size: 0.7rem;
 }
 
-
 /* contact */
 .form-text {
   color: var(--grey-600-color);
@@ -745,4 +737,3 @@ button[disabled] {
   background-color: var(--grey-500-color) !important;
   cursor: not-allowed;
 }
-
