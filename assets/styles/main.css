@@ -13,9 +13,19 @@
 }
 
 :root {
+  /* MetaProvide Color Palette */
+  --mp-color-white:  rgb(242, 242, 242);
+  --mp-color-black:  #212121;
+  --mp-color-gold:  #fab429;
+  --mp-color-darkgreen:  #00796e;
+  --mp-color-green:  #00ad90;
+  --mp-color-lightcyan:  #bffff9;
+  --mp-color-cyan:  #80fff3;
+
+
   --primary-color: #00ad90;
-  --secondary-color: rgb(55, 61, 199);
-  --website-max-width: 896px;
+  --secondary-color: var(var(--mp-color-white));
+  --website-max-width: 1000px;
   --content-max-width: 720px;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
@@ -87,9 +97,10 @@ h2 {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 8px auto;
   padding: 8px 0px;
-  max-width: var(--content-max-width);
+  max-width: var(--website-max-width);
 }
 
 .nav-list {
@@ -98,11 +109,7 @@ nav {
   list-style: none;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-}
-
-.nav-item {
-  margin: 0 4px;
+  justify-content: space-evenly;
 }
 
 .nav-item {
@@ -120,6 +127,10 @@ a {
   text-decoration: none;
   font-weight: 700;
   color: var(--secondary-color);
+}
+
+b {
+  color: #fab429;
 }
 
 nav a:hover {
