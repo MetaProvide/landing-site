@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato-Regular.ttf");
+  font-family: "Roc Grotesk";
+  src: url("../fonts/rocgroteskwide-regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato-Bold.ttf");
+  font-family: "Roc Grotesk";
+  src: url("../fonts/rocgroteskwide-bold.otf");
   font-weight: bold;
   font-style: bold;
 }
@@ -25,8 +25,8 @@
 
   --primary-color: #00ad90;
   --secondary-color: var(var(--mp-color-white));
-  --website-max-width: 1000px;
-  --content-max-width: 720px;
+  --website-max-width: 1200px;
+  --content-max-width: 820px;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
   --grey-500-color: #b4b4ba;
@@ -44,9 +44,9 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Roc Grotesk", sans-serif;
   color: var(--grey-900-color);
-  font-size: 16px;
+  font-size: 12px;
   padding-bottom: 64px;
   position: relative;
 }
@@ -85,11 +85,12 @@ body {
 h1 {
   text-align: center;
   margin: 24px;
-  font-size: 32px;
+  font-size: 2.1rem;
   margin-top: 48px;
 }
 
 h2 {
+  font-size: 1.7rem;
   text-align: center;
   margin: 48px;
 }
@@ -117,8 +118,8 @@ nav {
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   letter-spacing: 0.25px;
 }
 
@@ -147,6 +148,33 @@ main {
 section {
   width: 100%;
   margin-bottom: 84px;
+}
+
+.hero-text {
+  font-size: 18px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px;
+  margin-bottom: 0;
+}
+
+.hero-section h1 {
+  text-align: left;
+  margin-bottom: 64px;
+  margin-left: 0px;
+}
+
+.platforms-section {
+  padding: 32px 64px;
+}
+
+.little-bit-more-section, .what-is-swarm-section {
+  padding: 32px 64px;
+  background-color: var(--mp-color-lightcyan);
 }
 
 img {
@@ -213,6 +241,14 @@ video {
   width: 300px;
 }
 
+.gap-8 {
+  gap: 8px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
 .mtb-64 {
   margin-top: 64px;
   margin-bottom: 64px;
@@ -229,6 +265,17 @@ video {
 
 .mb-8 {
   margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.w-80 {
+  width: 80%;
+}
+.w-auto {
+  width: auto;
 }
 
 .areas-wrapper {
@@ -337,6 +384,15 @@ video {
   flex-direction: row-reverse;
 }
 
+.testamonial-image {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.testamonial-text, quote {
+  font-size: 10px;
+}
+
 .team-member-card q {
   max-width: 340px;
   text-align: center;
@@ -414,9 +470,42 @@ nav .checkbox {
   grid-gap: 16px;
 }
 
+.three-columns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
 }
 
 .spread {
