@@ -32,63 +32,72 @@
   <!-- Cookie consent managment by Osana -->
   <script src="https://cmp.osano.com/16CPXqTjn7XMBxF/5bde6be5-1af9-4cd4-aa09-875fe58b0043/osano.js"></script>
   <script src="//metaprovide-1f571.kxcdn.com/assets/javascript/main.js" defer></script>
+
+  <script type="module" src="https://unpkg.com/@cleverage/responsive-video-background@^1"></script>
+
 </head>
 
 <body>
-  <nav>
-    <div class="logo-wrapper">
-      <img src="./assets/images/logos/MetaProvideVectorBlack.svg" alt="MetaProvide logotype" />
-    </div>
-    <ul class="nav-list">
-      <li class="nav-item"><a href="#">Home</a></li>
-      <li class="nav-item"><a href="#">Team</a></li>
-      <li class="nav-item"><a href="#">Platformly</a></li>
-      <li class="nav-item"><a href="#">Adminly</a></li>
-      <li class="nav-item"><a href="#">Contact</a></li>
-      <li class="nav-item"><a href="#">Plugin</a></li>
-      <li class="nav-item"><a href="#">Blog</a></li>
-    </ul>
-  </nav>
+  
   <main>
 
-
-    <section class="hero-section">
-      <div class="video-wrapper">
-        <video class="video" playsinline autoplay muted loop poster="cake.jpg">
-          <source src="/assets/videos/hero-background.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-
-        <div class="hero-header">
-
-          <h1><b>Platforms</b> built for you to keep.
-            Your platform, your data. <b>Decentralised</b>.</h1>
-
-          <p class="hero-text">We are a team of programmers, product developers, administrators, communicators, and a
-            former Buddhist monk
-            who started it all. We are here to make a difference, through the services that we’re building.</p>
-
-
-        </div>
+    <responsive-video-background
+    webm="video.webm"
+    mp4="assets/videos/hero-background.mp4"
+    poster="video-poster.jpg"
+    fallback="not-responsive-image.jpg"
+    srcset="image-320.jpg 320w, image-640.jpg 640w, image-1024.jpg 1024w"
+    breakpoint="48rem">
+  
+    <nav>
+      <div class="logo-wrapper">
+        <img src="./assets/images/logos/MetaProvideVectorBlack.svg" alt="MetaProvide logotype" />
       </div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">Team</a></li>
+        <li class="nav-item"><a href="#">Platformly</a></li>
+        <li class="nav-item"><a href="#">Adminly</a></li>
+        <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="#">Plugin</a></li>
+        <li class="nav-item"><a href="#">Blog</a></li>
+      </ul>
+    </nav>
 
-    </section>
+
+      <div class="hero-header">
+        <h1
+        ><b>Platforms</b> built for you to keep.<br>
+          Your platform - your data.<br>
+          <b>Decentralised</b>.</h1>
+
+        <p class="hero-text">We are a team of programmers, product developers, administrators, communicators, and a
+          former Buddhist monk
+          who started it all. We are here to make a difference, through the services that we’re building.</p>
+
+      </div>
+</responsive-video-background>
+    
 
     <section class="platforms-section">
       <h2>Our platforms</h2>
       <h3 style="text-align: center;">All our platforms are Open Source, equipped with Web3-ready decentralised
         data-storage. </h3>
 
-      <div class="flex-row nowrap gap-8">
+      <div class="two-columns gap-8 max-w-content m-auto">
         <div class="flex-column align-center justify-between">
-          <h1>platformly</h1>
+          <div class="logo-wrapper">
+            <img src="./assets/images/logos/PlatformlyVectorColor.svg" alt="Platformly logo">
+          </div>
           <p class="w-80 mb-16 text-center">Platformly is your secure self-owned productivity platform. Designed for
             Tailored to the needs of your
             organisation. Equipped with a customisable suit of powerful collaboration tools.</p>
           <a href="#">Learn More</a>
         </div>
         <div class="flex-column align-center justify-between">
-          <h1>adminly</h1>
+          <div class="logo-wrapper">
+            <img src="./assets/images/logos/AdminlyWellnessVectorColor.svg" alt="Adminly logo">
+          </div>
           <p class="w-80 mb-16 text-center">Adminly is a platform for services in the wellness and health market.
             Lately, it has grown to fit any* B2C
             business needing effective administration and customer coordination.</p>
@@ -99,9 +108,9 @@
     </section>
 
     <section class="little-bit-more-section">
-      <h2>Our platforms</h2>
+      <h2>Get to know a little bit more about MetaProvide</h2>
 
-      <div class="three-columns gap-8">
+      <div class="max-w-content three-columns gap-8">
         <div class="flex-column justify-between">
           <img src="https://placehold.co/100" alt="">
           <h3>Technical Expertise</h3>
@@ -136,8 +145,8 @@
 
     <section class="testimonials-section">
       <h2>Our Testimonials</h2>
-      <div class="two-columns">
-        <div class="flex-row nowrap align-center gap-8">
+      <div class="max-w-content two-columns">
+        <div class="flex-row nowrap align-center gap-24">
           <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
           <div class="flex-column">
             <h5>Viktor Tron</h5>
@@ -147,7 +156,7 @@
             <p>Founder and Team Lead at Ethereum Swarm</p>
           </div>
         </div>
-        <div class="flex-row nowrap align-center gap-8">
+        <div class="flex-row nowrap align-center gap-24">
           <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
           <div class="flex-column">
             <h5>Gregor Žavcer</h5>
@@ -158,7 +167,7 @@
             <p>Director Swarm Foundation</p>
           </div>
         </div>
-        <div class="flex-row nowrap align-center gap-8">
+        <div class="flex-row nowrap align-center gap-24">
           <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
           <div class="flex-column">
             <h5>Henry Bergström</h5>
@@ -170,7 +179,7 @@
             <p>Tech Lead at MetaProvide</p>
           </div>
         </div>
-        <div class="flex-row nowrap align-center gap-8">
+        <div class="flex-row nowrap align-center gap-24">
           <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
           <div class="flex-column">
             <h5>Alexandr Shedogubov</h5>
@@ -179,7 +188,7 @@
             <p>Envelop</p>
           </div>
         </div>
-        <div class="flex-row nowrap align-center gap-8">
+        <div class="flex-row nowrap align-center gap-24">
           <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
           <div class="flex-column">
             <h5>Michal Matlon</h5>
@@ -187,7 +196,7 @@
             <p>theLivingCore</p>
           </div>
         </div>
-        <div class="flex-row nowrap align-center gap-8">
+        <div class="flex-row nowrap align-center gap-24">
           <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
           <div class="flex-column">
             <h5>Philippe Perou</h5>
@@ -201,6 +210,7 @@
 
     <section class="what-is-swarm-section">
       <h2>What is Swarm / Swarm Partners</h2>
+      <div class="max-w-content">
       <div class="image-wrapper">
         <img src="./assets/images/swarm-logo.png" alt="logo of swarm">
       </div>
@@ -210,22 +220,23 @@
         decentralised internet. Its incentive system is enforced through smart contracts on the Gnosis Chain blockchain
         and powered by the xBZZ token, making it economically self-sustaining.
       </p>
-      <div class="flex-row w-80 m-auto nowrap justify-between">
+      <div class="flex-row w-80 m-auto nowrap justify-between mb-32">
         <img class="w-auto" src="https://placehold.co/100" alt="log1"><img class="w-auto" src="https://placehold.co/100"
           alt="log2"><img class="w-auto" src="https://placehold.co/100" alt="log3">
       </div>
+    </div>
     </section>
 
     <section class="blogs-section">
       <h2>Latest Blogs</h2>
-      <div class="flex-row">
-        <div><img src="#" alt="#">
+      <div class="three-columns gap-8 max-w-content">
+        <div><img src="https://placehold.co/100" alt="#">
           <h5>Get a dealer now.</h5>
         </div>
-        <div><img src="#" alt="#">
+        <div><img src="https://placehold.co/100" alt="#">
           <h5>The key to a great team.</h5>
         </div>
-        <div><img src="#" alt="#">
+        <div><img src="https://placehold.co/100" alt="#">
           <h5>Let our CFO in Höör do your laundry. </h5>
         </div>
       </div>
