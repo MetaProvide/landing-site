@@ -43,24 +43,28 @@
 
     <responsive-video-background
     webm="video.webm"
-    mp4="assets/videos/hero-background.mp4"
-    poster="video-poster.jpg"
-    fallback="not-responsive-image.jpg"
-    srcset="image-320.jpg 320w, image-640.jpg 640w, image-1024.jpg 1024w"
+    mp4="assets/videos/herobackground.mp4"
+   
     breakpoint="48rem">
   
     <nav>
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
       <div class="logo-wrapper">
         <img src="./assets/images/logos/MetaProvideVectorBlack.svg" alt="MetaProvide logotype" />
       </div>
       <ul class="nav-list">
-        <li class="nav-item"><a href="#">Home</a></li>
-        <li class="nav-item"><a href="#">Team</a></li>
-        <li class="nav-item"><a href="#">Platformly</a></li>
-        <li class="nav-item"><a href="#">Adminly</a></li>
-        <li class="nav-item"><a href="#">Contact</a></li>
-        <li class="nav-item"><a href="#">Plugin</a></li>
-        <li class="nav-item"><a href="#">Blog</a></li>
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/team">Team</a></li>
+        <li class="nav-item"><a href="/platformly">Platformly</a></li>
+        <li class="nav-item"><a href="/adminly">Adminly</a></li>
+        <li class="nav-item"><a href="/contact">Contact</a></li>
+        <li class="nav-item"><a href="/nextcloud-swarm-plugin">Plugin</a></li>
+        <li class="nav-item"><a href="/blog">Blog</a></li>
       </ul>
     </nav>
 
@@ -74,7 +78,6 @@
         <p class="hero-text">We are a team of programmers, product developers, administrators, communicators, and a
           former Buddhist monk
           who started it all. We are here to make a difference, through the services that we’re building.</p>
-
       </div>
 </responsive-video-background>
     
@@ -230,14 +233,23 @@
     <section class="blogs-section">
       <h2>Latest Blogs</h2>
       <div class="three-columns gap-8 max-w-content">
-        <div><img src="https://placehold.co/100" alt="#">
-          <h5>Get a dealer now.</h5>
+        <div>
+          <a href="./blog/web3-value-autonomy">
+          <img src="assets/images/cryptocurrency.jpg" alt="Web3 - Reclaiming Identity Autonomy" />
+          <h4>Web3 - Reclaiming Value Autonomy | September 2023</h4>
+        </a>
         </div>
-        <div><img src="https://placehold.co/100" alt="#">
-          <h5>The key to a great team.</h5>
+        <div>
+          <a href="./blog/web3-reclaiming-identity-autonomy">
+          <img src="assets/images/identityautonomy.jpg" alt="Web3 - Reclaiming Identity Autonomy" />
+          <h4>Web3 - Reclaiming Identity Autonomy | August 2023</h4>
+          </a>
         </div>
-        <div><img src="https://placehold.co/100" alt="#">
-          <h5>Let our CFO in Höör do your laundry. </h5>
+        <div>
+          <a href="./blog/web3-reclaiming-data-sovereignty">
+          <img src="/assets/images/Nalanda_Ruins.jpg" alt="Web3 - Reclaiming Data Sovereignty">
+          <h4>Web3 - Reclaiming Data Sovereignty | August 2023</h4>
+        </a>
         </div>
       </div>
     </section>
