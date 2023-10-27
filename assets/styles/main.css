@@ -115,7 +115,7 @@ nav {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -164,6 +164,7 @@ main {
 
 section {
   max-width: var(--content-max-width);
+  margin: auto;
   width: 100%;
   margin-bottom: 84px;
   padding-left: 8px;
@@ -347,6 +348,24 @@ video {
 .mtb-32 {
   margin-top: 32px;
   margin-bottom: 32px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mr-16 {
+  margin-right: 8px;
+}
+
+.mlr-8 {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.mlr-16 {
+  margin-right: 16px;
+  margin-left: 16px;
 }
 
 .mb-32 {
