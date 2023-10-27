@@ -1,13 +1,20 @@
 @font-face {
   font-family: "Roc Grotesk";
-  src: url("../fonts/rocgroteskwide-regular.otf");
+  src: url("../fonts/Kostic\ -\ Roc\ Grotesk\ Light.otf.otf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roc Grotesk";
+  src: url("../fonts/Kostic\ -\ Roc\ Grotesk\ Regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roc Grotesk";
-  src: url("../fonts/rocgroteskwide-bold.otf");
+  src: url("../fonts/Kostic\ -\ Roc\ Grotesk\ Bold.otf");
   font-weight: bold;
   font-style: bold;
 }
@@ -121,7 +128,7 @@ nav {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1.0rem;
   line-height: 1.2rem;
   letter-spacing: 0.25px;
 }
@@ -156,25 +163,6 @@ main {
   height: 100%;
   width: 100%;
 }
-
-.video-wrapper {
-  width: 100%;
-  aspect-ratio: 16 / 4;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-wrapper {
-  width: 100vw;
-  aspect-ratio: 12 / 4;
-}
-
-
 
 section {
   width: 100%;
@@ -238,6 +226,21 @@ section {
 .little-bit-more-section,
 .what-is-swarm-section {
   padding: 32px 64px;
+  background-color: var(--mp-color-lightcyan);
+}
+
+.little-bit-more-section {
+  margin-bottom: 0;
+}
+
+.video-section h2 {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.video-section {
+  padding: 0 24px;
+  padding-bottom: 64px;
   background-color: var(--mp-color-lightcyan);
 }
 
@@ -465,11 +468,12 @@ video {
 .testamonial-image {
   width: 100px;
   border-radius: 50%;
+  border: 1px solid var(--mp-color-green);
 }
 
 .testamonial-text,
 quote {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .team-member-card q {
@@ -644,16 +648,43 @@ nav .checkbox {
 
 @media (max-width: 640px) {
 
+  section.platforms-section,
+  section.what-is-swarm-section,
+  section.testimonials-section,
+  section.platforms-section,
+  section.blogs-section {
+    padding: 0 24px;
+  }
+
+  .mobile-flex-column {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .hero-header {
-    padding: 64px 64px;
+    padding: 64px 24px;
   }
   
   .hero-header h1 {
     font-size: 2.8rem;
   }
 
-  nav {
+  h2 {
+    font-size: 1.3rem;
+    margin: 24px 0;
+  }
+
+  .video-wrapper {
+    aspect-ratio: 16 / 9;
+    max-width: none;
+  }
+
+  /* nav {
     height: 50;
+  } */
+
+  nav .logo-wrapper img {
+    width: 50%;
   }
 
   nav .checkbox {
@@ -720,6 +751,7 @@ nav .checkbox {
   .nav-item {
     font-size: 1.4rem;
     margin-bottom: 32px;
+    color: var(--mp-color-black);
   }
 
   nav .hamburger-lines .line {
@@ -745,7 +777,7 @@ nav .checkbox {
   }
 
   .nav-list.open {
-    transform: translateX(0%);
+    transform: translateY(45%);
   }
 
   nav input[type="checkbox"]:checked~.hamburger-lines .line1 {
