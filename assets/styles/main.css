@@ -325,6 +325,10 @@ video {
   margin: auto;
 }
 
+.w-200 {
+  width: 200px;
+}
+
 .max-w-800 {
   max-width: 800px;
   margin: auto;
@@ -333,6 +337,10 @@ video {
 .max-w-content {
   max-width: var(--content-max-width);
   margin: auto;
+}
+
+.rotate90 {
+  transform: rotate(-90deg);
 }
 
 .plr-8 {
@@ -366,6 +374,10 @@ video {
 .mlr-16 {
   margin-right: 16px;
   margin-left: 16px;
+}
+
+.pb-32 {
+  padding-bottom: 32px;
 }
 
 .mb-32 {
@@ -502,7 +514,7 @@ video {
 
 .testamonial-text,
 quote {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .team-member-card q {
@@ -513,6 +525,10 @@ quote {
 
 .hamburger-lines {
   display: none;
+}
+
+.block-hover:hover {
+  background-color: var(--mp-color-green);
 }
 
 input[type="text"] {
@@ -589,6 +605,13 @@ nav .checkbox {
   grid-gap: 16px;
 }
 
+.one-row {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -659,6 +682,10 @@ nav .checkbox {
   margin-right: 10px;
 }
 
+.max-w-100p {
+  max-width: 100%;
+}
+
 /* TODO: make this work! */
 .testamonial-card {
   display: flex;
@@ -681,6 +708,10 @@ nav .checkbox {
   --content-max-width: 600px;
 }
 
+
+  section.what-is-swarm-section {
+    padding-top: 32px !important;
+  }
 
   section.platforms-section,
   section.what-is-swarm-section,
@@ -824,6 +855,11 @@ nav .checkbox {
 
   nav input[type="checkbox"]:checked~.hamburger-lines .line3 {
     transform: rotate(-45deg);
+  }
+
+  .one-row {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr;
   }
 
   video {

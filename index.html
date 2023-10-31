@@ -38,50 +38,46 @@
 </head>
 
 <body>
-  
+
   <main>
 
-    <responsive-video-background
-    loop
-    webm="video.webm"
-    mp4="assets/videos/herobackground.mp4"
-    poster="assets/images/herobackground.jpg"
-    breakpoint="48rem">
-  
-    <nav>
-      <input class="checkbox" type="checkbox" name="" id="" />
-      <div class="hamburger-lines">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-      </div>
-      <div class="logo-wrapper mlr-16">
-        <img src="./assets/images/logos/MetaProvideVectorBlack.svg" alt="MetaProvide logotype" />
-      </div>
-      <ul class="nav-list">
-        <li class="nav-item white"><a href="/">Home</a></li>
-        <li class="nav-item white"><a href="/team">Team</a></li>
-        <li class="nav-item white"><a href="/platformly">Platformly</a></li>
-        <li class="nav-item white"><a href="https://adminly.org">Adminly</a></li>
-        <li class="nav-item white"><a href="/contact">Contact</a></li>
-        <li class="nav-item white"><a href="/nextcloud-swarm-plugin">Plugin</a></li>
-        <li class="nav-item white"><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
+    <responsive-video-background loop mp4="assets/videos/herobackground.mp4"
+      poster="./assets/images/herobackground.jpg">
+
+      <nav>
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <div class="logo-wrapper mlr-16">
+          <img src="./assets/images/logos/MetaProvideVectorBlack.svg" alt="MetaProvide logotype" />
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item white"><a href="/">Home</a></li>
+          <li class="nav-item white"><a href="/team">Team</a></li>
+          <li class="nav-item white"><a href="/platformly">Platformly</a></li>
+          <li class="nav-item white"><a href="https://adminly.org">Adminly</a></li>
+          <li class="nav-item white"><a href="/contact">Contact</a></li>
+          <li class="nav-item white"><a href="/nextcloud-swarm-plugin">Plugin</a></li>
+          <li class="nav-item white"><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
 
 
       <div class="hero-header">
-        <h1
-        ><b>Platforms</b> built for you to keep.<br>
+        <h1><b>Platforms</b> built for you to keep.<br>
           Your platform - your data.<br>
-          <b>Decentralised</b>.</h1>
+          <b>Decentralised</b>.
+        </h1>
 
         <p class="hero-text">We are a team of programmers, product developers, administrators, communicators, and a
           former Buddhist monk
           who started it all. We are here to make a difference, through the services that we’re building.</p>
       </div>
-</responsive-video-background>
-    
+    </responsive-video-background>
+
 
     <section class="platforms-section">
       <h2>Our platforms</h2>
@@ -173,7 +169,7 @@
           </div>
         </div>
         <div class="flex-row nowrap align-center gap-24 mobile-flex-column">
-          <img class="testamonial-image" src="assets/images/henry-400x400.png" alt="#">
+          <img class="testamonial-image" src="assets/images/henry-400x400.png" alt="Henry Bergstrom">
           <div class="flex-column">
             <h4>Henry Bergström</h4>
             <quote>"As Tech Lead, I am thrilled to work for MetaProvide on our mission to empower organisations to start
@@ -185,7 +181,7 @@
           </div>
         </div>
         <div class="flex-row nowrap align-center gap-24 mobile-flex-column">
-          <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
+          <img class="testamonial-image" src="assets/images/Alexandr Shedogubov.png" alt="Alexandr Shedogubov">
           <div class="flex-column">
             <h4>Alexandr Shedogubov</h4>
             <quote>“Nice to see more and more decentralized tools for everyday work to appear. Guys doing a good job”
@@ -193,16 +189,29 @@
             <p>Envelop</p>
           </div>
         </div>
+
         <div class="flex-row nowrap align-center gap-24 mobile-flex-column">
-          <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
+          <img class="testamonial-image" src="assets/images/Mirco.png" alt="Matthew McArthur">
+          <div class="flex-column">
+            <h4>Matthew McArthur</h4>
+            <quote>“Decentralised data and collaboration platforms create community and alleviate silos, we all need this for a more ethical, productive world.”
+            </quote>
+            <p>Mindful Design</p>
+          </div>
+        </div>
+
+
+        <div class="flex-row nowrap align-center gap-24 mobile-flex-column">
+          <img class="testamonial-image" src="assets/images/Michal Matlon.png" alt="Michal Matlon">
           <div class="flex-column">
             <h4>Michal Matlon</h4>
             <quote>"A brave attempt at decentralizing organizational software suites!”</quote>
             <p>theLivingCore</p>
           </div>
         </div>
+        
         <div class="flex-row nowrap align-center gap-24 mobile-flex-column">
-          <img class="testamonial-image" src="https://placehold.co/300x300" alt="#">
+          <img class="testamonial-image" src="assets/images/Philippe Perou.png" alt="Philippe Perou">
           <div class="flex-column">
             <h4>Philippe Perou</h4>
             <quote>“Web 2 ended up replicating the constraints of the real world, while Web 3 gives us the opportunity
@@ -216,42 +225,47 @@
     <section class="what-is-swarm-section">
       <h2>What is Swarm / Swarm Partners</h2>
       <div class="max-w-content">
-      <div class="image-wrapper">
-        <img src="./assets/images/swarm-logo.png" alt="logo of swarm">
+        <div class="max-w-100p">
+          <img style="height: 700px; margin: -200px 0px" class="rotate90" src="./assets/images/Swarm Logo.svg" alt="logo of swarm">
+        </div>
+        <p>Swarm is a peer-to-peer network of Bee Nodes that collectively provide censorship-resistant decentralised
+          storage and communication services. Swarm's mission is to shape the future towards a self-sovereign global
+          society and permissionless open markets by providing scalable base-layer data storage infrastructure for the
+          decentralised internet. Its incentive system is enforced through smart contracts on the Gnosis Chain
+          blockchain
+          and powered by the xBZZ token, making it economically self-sustaining.
+        </p>
+        <div class="three-columns max-w-content m-auto justify-between pb-32 align-center">
+          <img style="height: 200px; justify-self: center" class="rotate90 w-200" src="assets/images/The Living Core Logo.svg" alt="log1">
+          <img style="height: 200px; justify-self: center" class="rotate90 w-200" src="assets/images/Envelop Logo.svg" alt="log2">
+          <img style="height: 100px;" src="assets/images/Company3 Logo.svg" alt="log3">
+        </div>
       </div>
-      <p>Swarm is a peer-to-peer network of Bee Nodes that collectively provide censorship-resistant decentralised
-        storage and communication services. Swarm's mission is to shape the future towards a self-sovereign global
-        society and permissionless open markets by providing scalable base-layer data storage infrastructure for the
-        decentralised internet. Its incentive system is enforced through smart contracts on the Gnosis Chain blockchain
-        and powered by the xBZZ token, making it economically self-sustaining.
-      </p>
-      <div class="flex-row w-80 m-auto nowrap justify-between mb-32">
-        <img class="w-auto" src="https://placehold.co/100" alt="log1"><img class="w-auto" src="https://placehold.co/100"
-          alt="log2"><img class="w-auto" src="https://placehold.co/100" alt="log3">
-      </div>
-    </div>
     </section>
 
     <section class="blogs-section">
       <h2>Latest Blogs</h2>
       <div class="three-columns gap-8 max-w-content">
-        <div>
+        <div class="block-hover">
           <a href="./blog/web3-value-autonomy">
-          <img src="assets/images/cryptocurrency.jpg" alt="Web3 - Reclaiming Identity Autonomy" />
-          <h3>Web3 - Reclaiming Value Autonomy | September 2023</h3>
-        </a>
-        </div>
-        <div>
-          <a href="./blog/web3-reclaiming-identity-autonomy">
-          <img src="assets/images/identityautonomy.jpg" alt="Web3 - Reclaiming Identity Autonomy" />
-          <h3>Web3 - Reclaiming Identity Autonomy | August 2023</h3>
+            <img src="assets/images/cryptocurrency.jpg" alt="Web3 - Reclaiming Identity Autonomy" />
+            <h3>Web3 - Reclaiming Value Autonomy</h3>
+            <p>September 2023</p>
           </a>
         </div>
-        <div>
+        <div class="block-hover">
+          <a href="./blog/web3-reclaiming-identity-autonomy">
+            <img src="assets/images/identityautonomy.jpg" alt="Web3 - Reclaiming Identity Autonomy" />
+            <h3>Web3 - Reclaiming Identity Autonomy</h3>
+            <p>August 2023</p>
+          </a>
+        </div>
+        <div class="block-hover" >
           <a href="./blog/web3-reclaiming-data-sovereignty">
-          <img src="/assets/images/Nalanda_Ruins.jpg" alt="Web3 - Reclaiming Data Sovereignty">
-          <h3>Web3 - Reclaiming Data Sovereignty | August 2023</h3>
-        </a>
+            <img src="/assets/images/Nalanda_Ruins.jpg" alt="Web3 - Reclaiming Data Sovereignty">
+            <h3>Web3 - Reclaiming Data Sovereignty</h3>
+            <p>August 2023</p>
+          </a>
         </div>
       </div>
     </section>
