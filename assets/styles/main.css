@@ -34,7 +34,7 @@
   --primary-color: #00ad90;
   --secondary-color: var(var(--mp-color-white));
   --website-max-width: 1440px;
-  --content-max-width: 1000px;
+  --content-max-width: 1200px;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
   --grey-500-color: #b4b4ba;
@@ -98,9 +98,19 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 2.1rem;
   text-align: center;
   margin: 48px;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.0rem;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 nav {
@@ -109,7 +119,7 @@ nav {
   align-items: center;
   margin: 0px auto;
   margin-top: 24px;
-  max-width: var(--website-max-width);
+  /* max-width: var(--website-max-width); */
 }
 
 .nav-list {
@@ -122,13 +132,13 @@ nav {
 }
 
 .nav-item {
-  font-size: 1.1rem;
+  font-size: calc(0.25rem + 1vw);
   margin: 0 4px;
 }
 
 p {
-  font-size: 1.0rem;
-  line-height: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.4;
   letter-spacing: 0.25px;
 }
 
@@ -195,17 +205,12 @@ section {
 }
 
 .hero-header h1 {
-  font-size: 3.1rem;
+  font-size: calc(1.5rem + 2vw);
   color: var(--mp-color-white);
   text-align: left;
-  margin-bottom: 84px;
+  margin-bottom: 8vh;
   margin-left: 0px;
   margin-right: 0px;
-}
-
-.platforms-section h2 {
-  font-size: 2.1rem;
-  margin: 32px;
 }
 
 .platforms-section h3 {
@@ -213,7 +218,18 @@ section {
   max-width: 900px;
   text-align: center;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+}
+
+.platforms-section p {
+  line-height: 1.4rem;
+  margin-top: 32px;
+  margin-bottom: 64px;
+}
+
+.platforms-section a {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 
 .platforms-section {
@@ -221,8 +237,6 @@ section {
 }
 
 .what-is-swarm-section p {
-  font-size: 1rem;
-  line-height: 1.4rem;
   margin-top: 32px;
   margin-bottom: 64px;
 }
@@ -323,6 +337,10 @@ video {
   gap: 24px;
 }
 
+.gap-36 {
+  gap: 36px;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -343,6 +361,10 @@ video {
 
 .rotate90 {
   transform: rotate(-90deg);
+}
+
+.p-8 {
+  padding: 8px;
 }
 
 .plr-8 {
@@ -516,7 +538,7 @@ video {
 
 .testamonial-text,
 quote {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .team-member-card q {
@@ -597,7 +619,6 @@ nav .checkbox {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
 }
 
 .three-columns {
@@ -704,7 +725,7 @@ nav .checkbox {
   filter: grayscale(1);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
 
   :root {
   --content-max-width: 600px;
@@ -733,11 +754,11 @@ nav .checkbox {
   }
   
   .hero-header h1 {
-    font-size: 2.8rem;
+    font-size: calc(1.75rem + 1vw);
   }
 
   .hero-text {
-    font-size: 1.0rem;
+    font-size: calc(.75rem + 1vw);
   }
 
   h2 {
@@ -749,10 +770,6 @@ nav .checkbox {
     aspect-ratio: 16 / 9;
     max-width: none;
   }
-
-  /* nav {
-    height: 50;
-  } */
 
   nav .logo-wrapper img {
     width: 50%;
