@@ -38,47 +38,42 @@
 </head>
 
 <body>
+  <responsive-video-background loop mp4="assets/videos/herobackground.mp4" poster="./assets/images/herobackground.jpg"
+    style="width:100vw; height: 100vh;">
+
+    <nav>
+      <input class="checkbox" type="checkbox" name="" id="" />
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div class="logo-wrapper mlr-16">
+        <img src="./assets/images/logos/MetaProvideVectorBlack.svg" alt="MetaProvide logotype" />
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item white"><a href="/">Home</a></li>
+        <li class="nav-item white"><a href="/team">Team</a></li>
+        <li class="nav-item white"><a href="/platformly">Platformly</a></li>
+        <li class="nav-item white"><a href="https://adminly.org">Adminly</a></li>
+        <li class="nav-item white"><a href="/contact">Contact</a></li>
+        <li class="nav-item white"><a href="/nextcloud-swarm-plugin">Plugin</a></li>
+        <li class="nav-item white"><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="hero-header">
+      <h1><b>Platforms</b> built for you to keep.<br>
+        Your platform - your data.<br>
+        <b>Decentralised</b>.
+      </h1>
+
+      <p class="hero-text">We are a team of programmers, product developers, administrators, communicators, and a
+        former Buddhist monk
+        who started it all. We are here to make a difference, through the services that we’re building.</p>
+    </div>
+  </responsive-video-background>
 
   <main>
-
-    <responsive-video-background loop mp4="assets/videos/herobackground.mp4"
-      poster="./assets/images/herobackground.jpg">
-
-      <nav>
-        <input class="checkbox" type="checkbox" name="" id="" />
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>
-        <div class="logo-wrapper mlr-16">
-          <img src="./assets/images/logos/MetaProvideVectorBlack.svg" alt="MetaProvide logotype" />
-        </div>
-        <ul class="nav-list">
-          <li class="nav-item white"><a href="/">Home</a></li>
-          <li class="nav-item white"><a href="/team">Team</a></li>
-          <li class="nav-item white"><a href="/platformly">Platformly</a></li>
-          <li class="nav-item white"><a href="https://adminly.org">Adminly</a></li>
-          <li class="nav-item white"><a href="/contact">Contact</a></li>
-          <li class="nav-item white"><a href="/nextcloud-swarm-plugin">Plugin</a></li>
-          <li class="nav-item white"><a href="/blog">Blog</a></li>
-        </ul>
-      </nav>
-
-
-      <div class="hero-header">
-        <h1><b>Platforms</b> built for you to keep.<br>
-          Your platform - your data.<br>
-          <b>Decentralised</b>.
-        </h1>
-
-        <p class="hero-text">We are a team of programmers, product developers, administrators, communicators, and a
-          former Buddhist monk
-          who started it all. We are here to make a difference, through the services that we’re building.</p>
-      </div>
-    </responsive-video-background>
-
-
     <section class="platforms-section">
       <h2>Our platforms</h2>
       <h3 style="text-align: center;">All our platforms are Open Source, equipped with Web3-ready decentralised
@@ -112,21 +107,21 @@
 
       <div class="max-w-content three-columns gap-8">
         <div class="flex-column justify-between">
-          <img src="https://placehold.co/100" alt="">
+          <img src="assets/images/tag-icon.png" alt="tag icon">
           <h3>Technical Expertise</h3>
           <p>As an open-source contributor to Nextcloud over the years with thousands of servers utilising MetaProvide
             ‘s tools, MetaProvide has the proven technical expertise to support organisations as they transition from
             data dependency to data sovereignty.</p>
         </div>
         <div class="flex-column justify-between">
-          <img src="https://placehold.co/100" alt="">
+          <img src="assets/images/bar-icon.png" alt="bar icon">
           <h3>Vision for increasing decentralisation</h3>
           <p>As an open-source contributor to Nextcloud over the years with thousands of servers utilising MetaProvide
             ‘s tools, MetaProvide has the proven technical expertise to support organisations as they transition from
             data dependency to data sovereignty.</p>
         </div>
         <div class="flex-column justify-between">
-          <img src="https://placehold.co/100" alt="">
+          <img src="assets/images/rocket-icon.png" alt="rocket icon">
           <h3>Positioned to serve a growth sector</h3>
           <p>As data autonomy and security increasingly becomes a critical priority for organisations large and small,
             MetaProvide is MetaProvide is MetaProvide is positioning to become the trusted provider of decentralised
@@ -194,7 +189,8 @@
           <img class="testamonial-image" src="assets/images/Mirco.png" alt="Matthew McArthur">
           <div class="flex-column">
             <h4>Matthew McArthur</h4>
-            <quote>“Decentralised data and collaboration platforms create community and alleviate silos, we all need this for a more ethical, productive world.”
+            <quote>“Decentralised data and collaboration platforms create community and alleviate silos, we all need
+              this for a more ethical, productive world.”
             </quote>
             <p>Mindful Design</p>
           </div>
@@ -209,7 +205,7 @@
             <p>theLivingCore</p>
           </div>
         </div>
-        
+
         <div class="flex-row nowrap align-center gap-24 mobile-flex-column">
           <img class="testamonial-image" src="assets/images/Philippe Perou.png" alt="Philippe Perou">
           <div class="flex-column">
@@ -225,8 +221,9 @@
     <section class="what-is-swarm-section">
       <h2>What is Swarm / Swarm Partners</h2>
       <div class="max-w-content">
-        <div class="max-w-100p">
-          <img style="height: 700px; margin: -200px 0px" class="rotate90" src="./assets/images/Swarm Logo.svg" alt="logo of swarm">
+        <div class="max-w-100p swarm-logo-wrapper">
+          <img style="height: 700px; margin: -200px 0px" class="rotate90" src="./assets/images/Swarm Logo.svg"
+            alt="logo of swarm">
         </div>
         <p>Swarm is a peer-to-peer network of Bee Nodes that collectively provide censorship-resistant decentralised
           storage and communication services. Swarm's mission is to shape the future towards a self-sovereign global
@@ -236,8 +233,10 @@
           and powered by the xBZZ token, making it economically self-sustaining.
         </p>
         <div class="three-columns max-w-content m-auto justify-between pb-32 align-center">
-          <img style="height: 200px; justify-self: center" class="rotate90 w-200" src="assets/images/The Living Core Logo.svg" alt="log1">
-          <img style="height: 200px; justify-self: center" class="rotate90 w-200" src="assets/images/Envelop Logo.svg" alt="log2">
+          <img style="height: 200px; justify-self: center" class="rotate90 w-200"
+            src="assets/images/The Living Core Logo.svg" alt="log1">
+          <img style="height: 200px; justify-self: center" class="rotate90 w-200" src="assets/images/Envelop Logo.svg"
+            alt="log2">
           <img style="height: 100px;" src="assets/images/Company3 Logo.svg" alt="log3">
         </div>
       </div>
@@ -260,7 +259,7 @@
             <p>August 2023</p>
           </a>
         </div>
-        <div class="block-hover" >
+        <div class="block-hover">
           <a href="./blog/web3-reclaiming-data-sovereignty">
             <img src="/assets/images/Nalanda_Ruins.jpg" alt="Web3 - Reclaiming Data Sovereignty">
             <h3>Web3 - Reclaiming Data Sovereignty</h3>
