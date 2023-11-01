@@ -125,6 +125,7 @@ nav {
 
 .nav-list {
   margin-left: 0;
+  margin-top: -10px;
   padding-left: 0;
   list-style: none;
   width: 100%;
@@ -739,6 +740,14 @@ nav .checkbox {
     width: 100%;
   }
 
+  .modal-content {
+    margin: auto !important;
+    /* 15% from the top and centered */
+    padding: 18px 28px;
+    width: 100% !important;
+    /* Could be more or less, depending on screen size */
+  }
+
   nav {
     margin-left: 0;
     margin-top: 0;
@@ -990,7 +999,7 @@ nav .checkbox {
   /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   /* Full width */
   height: 100%;
   /* Full height */
@@ -1004,9 +1013,8 @@ nav .checkbox {
 
 /* Modal Content/Box */
 .modal-content {
-  max-width: var(--content-max-width);
   background-color: #fefefe;
-  margin: 10vh auto;
+  margin: 24px auto;
   /* 15% from the top and centered */
   padding: 18px 28px;
   border: 1px solid var(--secondary-color);
