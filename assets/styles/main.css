@@ -155,7 +155,7 @@ b {
 }
 
 nav a:hover {
-  color: var(--primary-color);
+  color: var(--mp-color-gold);
   font-weight: 800;
 }
 
@@ -289,7 +289,7 @@ video {
 .btn {
   cursor: pointer;
   padding: 8px 16px;
-  background-color: var(--secondary-color);
+  background-color: var(--mp-color-gold);
   color: white;
   border-radius: 4px;
 }
@@ -554,7 +554,7 @@ quote {
 }
 
 .block-hover:hover {
-  background-color: var(--mp-color-green);
+  background-color: var(--mp-color-gold);
 }
 
 input[type="text"] {
@@ -588,6 +588,12 @@ button,
   padding: 12px;
   font-size: 20px;
   border: none;
+}
+
+button:hover,
+.button:hover, .btn:hover {
+  background-color: var(--mp-color-white);
+  color: var(--mp-color-gold);
 }
 
 button:disabled,
@@ -728,11 +734,10 @@ nav .checkbox {
 }
 
 @media (max-width: 700px) {
-
-  :root {
-  --content-max-width: 600px;
-}
-
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 
   section.what-is-swarm-section {
     padding-top: 32px !important;
@@ -976,7 +981,7 @@ nav .checkbox {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 50;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -1033,6 +1038,7 @@ nav .checkbox {
 }
 
 .donation-option {
+  max-width: calc(var(--content-max-width) * 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
