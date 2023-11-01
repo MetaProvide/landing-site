@@ -739,6 +739,11 @@ nav .checkbox {
     width: 100%;
   }
 
+  nav {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
   section.what-is-swarm-section {
     padding-top: 32px !important;
   }
