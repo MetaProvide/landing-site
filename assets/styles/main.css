@@ -742,14 +742,6 @@ nav .checkbox {
 
 @media (max-width: 700px) {
 
-  .osano-cm-window { display: none; }
-
-  /* osana fix for mobile width issue */
-  [class*="osano"] {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-
   :root {
     --content-max-width: 100vw;
   }
