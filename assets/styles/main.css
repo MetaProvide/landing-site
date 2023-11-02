@@ -734,7 +734,7 @@ nav .checkbox {
   max-width: 250px;
   max-height: 250px;
   border-radius: 100%;
-  margin-right: 24px;
+  margin-right: 48px;
   margin-bottom: 32px;
   filter: grayscale(1);
 }
