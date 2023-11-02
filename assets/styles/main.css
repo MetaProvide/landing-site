@@ -36,7 +36,7 @@
   /* --website-max-width: 1440px; */
   /* --content-max-width: 1200px; */
   --website-max-width: 100vw;
-  --content-max-width: 70vw;
+  --content-max-width: 60vw;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
   --grey-500-color: #b4b4ba;
@@ -111,9 +111,9 @@ h3 {
 }
 
 h4 {
-  font-size: 1.0rem;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  font-size: 1.2rem;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 
 nav {
@@ -282,7 +282,7 @@ hr {
   max-width: 100%;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 video {
@@ -687,22 +687,22 @@ nav .checkbox {
 
 .app-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 24px;
 }
 
 .app-card-text {
-  width: 55%;
+  width: 85%;
 }
 
-.app-card img {
-  max-width: 45%;
-  max-height: 250px;
-  transform: scale(1.25);
+.app-card div {
+  min-width: 250px;
+  max-width: 500px;
 }
 
 .image-extra-big {
-  width: min(var(--website-max-width), 95vw);
+  width: min(var(--website-max-width), 60vw);
 }
 
 .icon-button {
@@ -727,6 +727,7 @@ nav .checkbox {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 24px;
 }
 
 .testamonial-card img {
@@ -737,6 +738,7 @@ nav .checkbox {
   margin-bottom: 32px;
   filter: grayscale(1);
 }
+
 
 @media (max-width: 700px) {
 
@@ -800,7 +802,7 @@ nav .checkbox {
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     margin: 24px 0;
   }
 
