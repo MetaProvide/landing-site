@@ -36,7 +36,7 @@
   /* --website-max-width: 1440px; */
   /* --content-max-width: 1200px; */
   --website-max-width: 100vw;
-  --content-max-width: 60vw;
+  --content-max-width: 66vw;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
   --grey-500-color: #b4b4ba;
@@ -48,6 +48,7 @@
 
 
 html {
+  font-size: 62.5%;
   width: 100vw;
 }
 
@@ -96,22 +97,22 @@ body {
 h1 {
   text-align: center;
   margin: 24px;
-  font-size: 2.1rem;
+  font-size: 2.9rem;
   margin-top: 48px;
 }
 
 h2 {
-  font-size: 2.1rem;
+  font-size: 2.6rem;
   text-align: center;
   margin: 48px;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-top: 9px;
   margin-bottom: 9px;
 }
@@ -142,8 +143,8 @@ nav {
 }
 
 p {
-  font-size: 1.2rem;
-  line-height: 1.4;
+  font-size: 1.6rem;
+  line-height: 1.6;
   letter-spacing: 0.25px;
 }
 
@@ -224,18 +225,17 @@ section {
   max-width: 900px;
   text-align: center;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
 }
 
 .platforms-section p {
-  line-height: 1.4rem;
   margin-top: 32px;
   margin-bottom: 64px;
 }
 
 .platforms-section a {
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
 }
 
 .platforms-section {
@@ -359,13 +359,13 @@ video {
 
 .posts-list-item {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   list-style: none;
   border-bottom: 1px solid #696970;
 }
 
 .posts-list-item p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: black;
 }
@@ -439,7 +439,7 @@ video {
 
 .testamonial-text,
 quote {
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .team-member-card q {
@@ -529,8 +529,13 @@ nav .checkbox {
   margin-bottom: 24px;
 }
 
+.app-card-image {
+  flex: 3;
+}
+
 .app-card-text {
   width: 85%;
+  flex: 4;
 }
 
 .app-card div {
@@ -547,16 +552,12 @@ nav .checkbox {
   flex-wrap: nowrap;
   align-items: center;
   text-align: center;
-  font-size: min(6vw, 1.3rem);
+  font-size: min(6vw, 2.0rem);
 }
 
 .icon {
   width: 25px;
   margin-right: 10px;
-}
-
-.max-w-100p {
-  max-width: 100%;
 }
 
 /* TODO: make this work! */
@@ -637,7 +638,7 @@ nav .checkbox {
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 2.0rem;
     margin: 24px 0;
   }
 
@@ -913,7 +914,7 @@ nav .checkbox {
 }
 
 .donation-option p {
-  font-size: 0.7rem;
+  font-size: 1.0rem;
 }
 
 /* contact */

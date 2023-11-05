@@ -137,27 +137,30 @@
 
 .text-center {
     text-align: center;
-  }
-  
-  .justify-center {
+}
+
+.justify-center {
     justify-content: center;
-  }
-  
-  .align-center {
+}
+
+.align-center {
     align-items: center;
-  }
-  
-  .justify-between {
+}
+
+.justify-between {
     justify-content: space-between;
-  }
-  
-  .nowrap {
+}
+
+.nowrap {
     flex-wrap: nowrap;
-  }
-  
-  .spread {
+}
+
+.spread {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
+}
+
+.max-w-100p {
+    max-width: 100%;
+}
