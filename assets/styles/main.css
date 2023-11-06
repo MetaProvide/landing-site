@@ -35,7 +35,7 @@
   --secondary-color: var(var(--mp-color-white));
   /* --website-max-width: 1440px; */
   /* --content-max-width: 1200px; */
-  --website-max-width: 900px;
+  /* --website-max-width: 900px; */
   --content-max-width: 720px;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
@@ -416,7 +416,7 @@ video {
 }
 
 .team-member-card q {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 
@@ -719,7 +719,7 @@ nav .checkbox {
   }
 
   .nav-item {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin-bottom: 32px;
     color: var(--mp-color-black);
   }
