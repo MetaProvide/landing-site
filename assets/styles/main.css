@@ -46,7 +46,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   font-size: 62.5%;
   width: 100vw;
@@ -122,9 +121,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0px auto;
-  margin-top: 24px;
   margin-left: 5vw;
-  /* max-width: var(--website-max-width); */
 }
 
 .nav-list {
@@ -140,6 +137,22 @@ nav {
 .nav-item {
   font-size: calc(0.25rem + 1vw);
   margin: 0 4px;
+}
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/assets/images/heroCover.jpeg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 p {
@@ -195,9 +208,10 @@ section {
 }
 
 .hero-text {
+  margin-top: 24px;
   color: var(--mp-color-white);
   font-weight: 500;
-  font-size: calc(0.75rem + 1vw);
+  font-size: calc(1.0rem + 1vw);
   line-height: 1.8;
 }
 
@@ -206,8 +220,6 @@ section {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 0;
-  background: url("/assets/videos/hero-background.mp4") no-repeat;
-  background-size: cover;
 }
 
 .hero-header {
@@ -235,7 +247,7 @@ section {
 
 .platforms-section p {
   margin-top: 32px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .platforms-section a {
@@ -496,7 +508,8 @@ button,
 }
 
 button:hover,
-.button:hover, .btn:hover {
+.button:hover,
+.btn:hover {
   background-color: var(--mp-color-white);
   color: var(--mp-color-gold);
 }
@@ -634,13 +647,13 @@ nav .checkbox {
   .hero-header {
     padding: 64px 24px;
   }
-  
+
   .hero-header h1 {
-    font-size: calc(1.75rem + 1vw);
+    font-size: calc(1.75rem + 2vw);
   }
 
   .hero-text {
-    font-size: calc(.75rem + 1vw);
+    font-size: calc(1.0rem + 2vw);
   }
 
   h2 {
@@ -817,7 +830,7 @@ nav .checkbox {
     grid-template-columns: 1fr;
   }
 
-  .three-columns div{
+  .three-columns div {
     margin-bottom: 24px;
 
   }

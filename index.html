@@ -41,13 +41,10 @@
   <!-- Cookie consent managment by Osana -->
   <script src="https://cmp.osano.com/16CPXqTjn7XMBxF/5bde6be5-1af9-4cd4-aa09-875fe58b0043/osano.js" defer></script>
   <script src="assets/javascript/main.js" defer></script>
-
-  <script type="module" src="https://unpkg.com/@cleverage/responsive-video-background@^1"></script>
-
 </head>
 
 <body>
-  <responsive-video-background loop mp4="assets/videos/herobackground.mp4" poster="./assets/images/herobackground.jpg"
+  <div class="hero-image"
     style="width:100vw; min-height: 100vh;">
 
     <nav>
@@ -82,7 +79,7 @@
         former Buddhist monk
         who started it all. We are here to make a difference, through the services that we’re building.</p>
     </div>
-  </responsive-video-background>
+  </div>
 
   <main style="max-width: 100vw;">
     <section class="platforms-section">
@@ -93,11 +90,11 @@
 
       <div class="two-columns gap-8 max-w-content m-auto">
         <div class="flex-column align-center">
-          <div class="logo-wrapper">
+          <div class="logo-wrapper" style="height: 150px;">
             <img src="./assets/images/logos/PlatformlyVectorColor.svg" alt="Platformly logo">
           </div>
           <div class="flex-column space-between align-center" style="max-height: 350px;">
-            <p class="w-80 mb-8 text-center" style="margin-bottom: 46px;">Platformly is your secure self-owned
+            <p class="w-80 mb-8" style="margin-bottom: 46px;">Platformly is your secure self-owned
               productivity platform. Designed for
               Tailored to the needs of your
               organisation. Equipped with a customisable suit of powerful collaboration tools.</p>
@@ -106,12 +103,12 @@
         </div>
         <div class="flex-column align-center">
           <a href="/adminly">
-            <div class="logo-wrapper">
-              <img src="./assets/images/logos/AdminlyWellnessVectorColor.svg" alt="Adminly logo">
+            <div class="logo-wrapper" style="height: 150px;">
+              <img src="./assets/images/logos/Adminly.png" alt="Adminly logo">
             </div>
           </a>
           <div class="flex-column space-between align-center" style="max-height: 350px;">
-            <p class="w-80 mb-16 text-center">Adminly is a platform for services in the wellness and health market.
+            <p class="w-80 mb-16">Adminly is a platform for services in the wellness and health market.
               Lately, it has grown to fit any* B2C
               business needing effective administration and customer coordination.</p>
             <a href="/adminly">Learn More</a>
@@ -122,7 +119,7 @@
     </section>
 
     <section class="little-bit-more-section">
-      <h2>Get to know a little bit more about MetaProvide</h2>
+      <h2 class="mb-16">Get to know a little bit more about MetaProvide</h2>
 
       <div class="max-w-content three-columns gap-24 mb-32">
         <div class="flex-column align-center">
