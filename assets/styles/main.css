@@ -57,10 +57,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roc Grotesk", sans-serif;
-  color: var(--grey-900-color);
   font-size: 12px;
   padding-bottom: 64px;
   position: relative;
+  color: var(--mp-color-black);
 }
 
 .wave {
