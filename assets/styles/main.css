@@ -156,7 +156,7 @@ nav {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: 0.025rem;
 }
@@ -242,7 +242,6 @@ section {
   max-width: 900px;
   text-align: center;
   font-weight: 500;
-  font-size: 2.1rem;
 }
 
 .platforms-section p {
@@ -654,11 +653,6 @@ nav .checkbox {
 
   .hero-text {
     font-size: calc(1.0rem + 2vw);
-  }
-
-  h2 {
-    font-size: 2.0rem;
-    margin: 24px 0;
   }
 
   .video-wrapper {
