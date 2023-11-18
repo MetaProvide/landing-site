@@ -231,8 +231,8 @@ section {
   font-size: calc(1.5rem + 2vw);
   color: var(--mp-color-white);
   text-align: left;
-  margin-bottom: 6vh;
-  margin-top: 3vw;
+  margin-bottom: 7vh;
+  margin-top: 4vw;
   margin-left: 0px;
   margin-right: 0px;
 }
@@ -648,7 +648,7 @@ nav .checkbox {
   }
 
   .hero-header h1 {
-    font-size: calc(1.75rem + 2vw);
+    font-size: calc(2.5rem + 2vw);
   }
 
   .hero-text {
