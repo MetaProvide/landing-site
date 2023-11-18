@@ -562,7 +562,7 @@ nav .checkbox {
 }
 
 .image-extra-big {
-  width: min(var(--website-max-width), 60vw);
+  width: 100%;
 }
 
 .icon-button {
