@@ -769,6 +769,10 @@ nav .checkbox {
     transform: rotate(-45deg);
   }
 
+  .w-80 {
+    width: 100%;
+  }
+
   .one-row {
     grid-template-rows: unset;
     grid-template-columns: 1fr;
