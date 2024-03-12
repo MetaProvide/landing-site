@@ -73,7 +73,7 @@ body {
 
 .wave a {
   position: relative;
-  top: 6.5rem;
+  top: 6.7rem;
   width: 100%;
   display: block;
   text-align: center;
@@ -103,7 +103,7 @@ h1 {
 h2 {
   font-size: 2.6rem;
   text-align: center;
-  margin: 48px;
+  margin: 48px 0px;
 }
 
 h3 {
@@ -392,7 +392,7 @@ video {
 
 .posts-list-item div {
   margin: 16px auto;
-  width: 60px;
+  width: 70px;
   padding: 8px 12px;
   font-weight: 400;
   border-radius: 3px;
@@ -605,6 +605,10 @@ nav .checkbox {
   body {
     overflow-x: hidden;
     width: 100%;
+  }
+  
+  main {
+    padding: 0 16px;
   }
 
   .modal-content {
