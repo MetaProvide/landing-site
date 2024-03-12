@@ -606,6 +606,10 @@ nav .checkbox {
     overflow-x: hidden;
     width: 100%;
   }
+  
+  main {
+    padding: 0 16px;
+  }
 
   .modal-content {
     margin: auto !important;
