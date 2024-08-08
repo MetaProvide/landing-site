@@ -32,7 +32,7 @@
 
 
   --primary-color: #00ad90;
-  --secondary-color: var(var(--mp-color-white));
+  --secondary-color: var(var(--mp-color-black));
   /* --website-max-width: 1440px; */
   /* --content-max-width: 1200px; */
   /* --website-max-width: 900px; */
@@ -59,7 +59,8 @@ body {
   font-size: 12px;
   padding-bottom: 64px;
   position: relative;
-  color: var(--mp-color-black);
+  color: var(--mp-color-white);
+  background-color: var(--mp-color-black);
 }
 
 .wave {
