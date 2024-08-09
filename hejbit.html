@@ -39,6 +39,7 @@
   <!-- Cookie consent managment by Osana -->
   <script src="https://cmp.osano.com/16CPXqTjn7XMBxF/5bde6be5-1af9-4cd4-aa09-875fe58b0043/osano.js"></script>
   <script src="assets/javascript/main.js" defer></script>
+  <script src="assets/javascript/carousel.js" defer></script>
 </head>
 
 <body>
@@ -63,25 +64,41 @@
   </nav>
   <main>
     <section>
-      <h1>Do you still think decentralised data is complicated?</h1>
-      <p style="text-align: center">
+      <h1 class="hejbit-yellow" style="margin: 8px 0px 16px 0px; text-align: left; font-weight: 500;">Do you still think decentralised data is complicated?</h1>
+      <p style="line-height: 2em; font-size: large;">
         The Hejbit plugin lets you store, edit, collaborate, and share your files with NextCloud and Ethereum Swarm with ease and simplicity.
       </p>
 
-      <h2>There are a few commonly accepted misconceptions about data sovereignty.</h2>
-      <div>
-        <div>1</div>
-        <div><h4>Misconception: centralised data is secure.</h4>
+      <h2>The <b class="hejbit-yellow">Hejbit</b> alternative</h2>
+
+      <div class="image-wrapper">
+        <img src="assets/images/hejbit-showcase.png"
+            alt="Showcase of Hejbit view" />
+    </div>
+
+      <h3 class="hejbit-yellow">There are a few commonly accepted misconceptions about data sovereignty.</h3>
+
+
+
+    <carousel-component>
+      <div style="display: flex;
+      background-color: black;
+      border-radius: 16px;
+      padding: 32px; max-width: 400px;">
+        <div style="color: var(--mp-hejbit-blue); font-size: 9rem; margin-right: 16px">1</div>
+        <div><h3 style="color: var(--mp-hejbit-blue);">Misconception: centralised data is secure.</h3>
         <p>Data breaches, cloud storage failures, unauthorized access, data
           mining, and policy changes by third-party providers are making
           headlines more and more often.
           </p></div>
       </div>
-
-      <div>
-        <div>2</div>
-        <div><h4>Misconception: decentralised data solutions are
-          complicated.</h4>
+      <div style="display: flex;
+      background-color: black;
+      border-radius: 16px;
+      padding: 32px; max-width: 400px;">
+        <div style="color: var(--mp-hejbit-blue); font-size: 9rem; margin-right: 16px">2</div>
+        <div><h3 style="color: var(--mp-hejbit-blue); ">Misconception: decentralised data solutions are
+          complicated.</h3>
         <p>The advantages of using Web3 technology for ultimate data
           privacy come with the disadvantages of immense technical
           complexity.
@@ -92,11 +109,13 @@
           of use, as well as absolute privacy, at its core.
           </p></div>
       </div>
-
-      <div>
-        <div>3</div>
-        <div><h4>Misconception: centralised dropboxes and cloud
-          drives offer a better user experience.</h4>
+      <div style="display: flex;
+      background-color: black;
+      border-radius: 16px;
+      padding: 32px; max-width: 400px;">
+        <div style="color: var(--mp-hejbit-blue); font-size: 9rem; margin-right: 16px">3</div>
+        <div><h3 style="color: var(--mp-hejbit-blue);">Misconception: centralised dropboxes and cloud
+          drives offer a better user experience.</h3>
         <p>In a convenient world of user experience, it’s easy to go with the
           adage, “Better the devil you know than the one you don’t”.
           
@@ -107,6 +126,13 @@
           what we’re already using!
           </p></div>
       </div>
+  </carousel-component>
+
+      
+
+      
+
+      
       
     </section>
 

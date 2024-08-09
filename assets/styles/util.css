@@ -129,6 +129,27 @@
     color: var(--mp-color-white);
 }
 
+.hejbit-blue {
+    color: var(--mp-hejbit-blue);
+}
+
+
+.hejbit-yellow {
+    color: var(--mp-hejbit-yellow);
+}
+
+.hejbit-blue {
+    color: var(--mp-hejbit-blue);
+}
+
+.bg-hejbit-yellow {
+    background-color: var(--mp-hejbit-yellow);
+}
+
+.massive.ol.li  {
+   font-size: xx-large; 
+}
+
 .center {
     display: flex;
     justify-content: center;
