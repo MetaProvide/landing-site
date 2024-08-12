@@ -344,6 +344,10 @@ video {
   max-width: 300px;
 }
 
+.carousel-wrapper {
+  margin-bottom: 16px;
+}
+
 .areas-wrapper {
   display: flex;
   justify-content: space-between;

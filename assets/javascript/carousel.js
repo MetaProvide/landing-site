@@ -59,18 +59,23 @@ class CarouselComponent extends HTMLElement {
     .indicators {
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-top: 10px;
     }
     .indicator {
         width: 10px;
         height: 10px;
-        background-color: #ccc;
+        background-color: #ffd700;
+        opacity: 0.5;
         border-radius: 50%;
         margin: 0 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: 0.3s ease;
     }
     .indicator.active {
+        opacity: 1;
+        width: 13px;
+        height: 13px;
         background-color: #ffd700; /* Gold color to match the small circles in your reference */
     }
  `;
