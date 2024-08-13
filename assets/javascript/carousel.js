@@ -163,8 +163,6 @@ class CarouselComponent extends HTMLElement {
     }
 
     showSlide(index, direction) {
-
-        console.log("show index: ", index);
         const previousSlide = this.slides[this.currentIndex];
         const nextSlide = this.slides[index];
 
