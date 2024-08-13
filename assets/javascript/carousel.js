@@ -12,6 +12,7 @@ class CarouselComponent extends HTMLElement {
         elements.forEach((element, index) => {
             const slide = document.createElement('div');
             slide.classList.add('slide');
+            slide.style.zIndex = elements.length - index; // Set z-index based on the position
             if (index === 0) slide.classList.add('active');
             slide.appendChild(element.cloneNode(true));
             wrapper.appendChild(slide);
@@ -37,21 +38,22 @@ class CarouselComponent extends HTMLElement {
     .carousel {
         position: relative;
         width: 100%;
-        overflow: hidden;
         display: flex;
+        overflow: hidden;
     }
     .slide {
-        min-width: 100%;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        opacity: 0;
+        max-width: 75%;
+        transition: transform 0.5s ease;
         position: absolute;
         top: 0;
         left: 0;
+        margin: 0 32px;
     }
     .slide.active {
         opacity: 1;
         position: relative;
         transform: translateX(0);
+        z-index: 10;
     }
     .slide:not(.active) {
         transform: translateX(100%);
@@ -60,7 +62,7 @@ class CarouselComponent extends HTMLElement {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 16px;
     }
     .indicator {
         width: 10px;
@@ -161,11 +163,17 @@ class CarouselComponent extends HTMLElement {
     }
 
     showSlide(index, direction) {
+
+        console.log("show index: ", index);
         const previousSlide = this.slides[this.currentIndex];
         const nextSlide = this.slides[index];
 
         // Remove active class from the current slide
         previousSlide.classList.remove('active');
+
+         // Adjust the z-index of the slides to make the next slide the topmost
+         previousSlide.style.zIndex = 9;
+         nextSlide.style.zIndex = 10;
 
         // Prepare the next slide for entry
         if (direction === 'right-to-left') {

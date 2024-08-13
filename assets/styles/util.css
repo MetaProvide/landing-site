@@ -190,6 +190,10 @@
     align-items: center;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 .max-w-100p {
     max-width: 100%;
 }
