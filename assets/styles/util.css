@@ -201,3 +201,7 @@
 .max-w-100p {
     max-width: 100%;
 }
+
+.min-w-100vw {
+    min-width: 100vw;
+}

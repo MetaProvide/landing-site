@@ -12,7 +12,6 @@ class CarouselComponent extends HTMLElement {
         elements.forEach((element, index) => {
             const slide = document.createElement('div');
             slide.classList.add('slide');
-            slide.style.zIndex = elements.length - index; // Set z-index based on the position
             if (index === 0) slide.classList.add('active');
             slide.appendChild(element.cloneNode(true));
             wrapper.appendChild(slide);
@@ -36,27 +35,32 @@ class CarouselComponent extends HTMLElement {
         const style = document.createElement('style');
         style.textContent = `
     .carousel {
-        position: relative;
         width: 100%;
-        display: flex;
-        overflow: hidden;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 70%;
+        grid-column-gap: 1rem;
+        scroll-snap-type: inline mandatory;
+        overflow-x: scroll;
+        flex-shrink: 0;
     }
+
+    .carousel::-webkit-scrollbar {
+        display: none;
+    }
+    
     .slide {
-        max-width: 75%;
+        width: 100%;
+        border: 1px solid red;
         transition: transform 0.5s ease;
-        position: absolute;
-        top: 0;
-        left: 0;
         margin: 0 32px;
     }
     .slide.active {
         opacity: 1;
         position: relative;
-        transform: translateX(0);
-        z-index: 10;
     }
     .slide:not(.active) {
-        transform: translateX(100%);
+        transform: scale(1);
     }
     .indicators {
         display: flex;
@@ -104,8 +108,8 @@ class CarouselComponent extends HTMLElement {
         wrapper.addEventListener('mouseleave', () => this.mouseLeave());
 
         this.indicators.forEach((indicator, index) => {
-            const direction = index > this.currentIndex ? 'right-to-left' : 'left-to-right';
-            indicator.addEventListener('click', () => this.showSlide(index, direction));
+            // const direction = index > this.currentIndex ? 'right-to-left' : 'left-to-right';
+            indicator.addEventListener('click', () => this.showSlide(index));
         });
     }
 
@@ -148,52 +152,32 @@ class CarouselComponent extends HTMLElement {
 
     handleSwipeOrDrag() {
         if (this.startX > this.currentX) {
-            this.showNextSlide('right-to-left');
+            this.showNextSlide();
         } else if (this.startX < this.currentX) {
-            this.showPrevSlide('left-to-right');
+            this.showPrevSlide();
         }
     }
 
-    showPrevSlide(direction = 'left-to-right') {
-        this.showSlide((this.currentIndex - 1 + this.slides.length) % this.slides.length, direction);
+    showPrevSlide() {
+        this.showSlide((this.currentIndex - 1 + this.slides.length) % this.slides.length);
     }
 
-    showNextSlide(direction = 'right-to-left') {
-        this.showSlide((this.currentIndex + 1) % this.slides.length, direction);
+    showNextSlide() {
+        this.showSlide((this.currentIndex + 1) % this.slides.length);
     }
 
-    showSlide(index, direction) {
+    showSlide(index) {
         const previousSlide = this.slides[this.currentIndex];
         const nextSlide = this.slides[index];
 
         // Remove active class from the current slide
         previousSlide.classList.remove('active');
 
-         // Adjust the z-index of the slides to make the next slide the topmost
-         previousSlide.style.zIndex = 9;
-         nextSlide.style.zIndex = 10;
-
-        // Prepare the next slide for entry
-        if (direction === 'right-to-left') {
-            nextSlide.style.transform = 'translateX(100%)';
-        } else if (direction === 'left-to-right') {
-            nextSlide.style.transform = 'translateX(-100%)';
-        }
-
         // Force a reflow to apply the transformation immediately
         void nextSlide.offsetWidth;
 
         // Add active class to the next slide
         nextSlide.classList.add('active');
-
-        // Apply the final transformation for the sliding effect
-        if (direction === 'right-to-left') {
-            previousSlide.style.transform = 'translateX(-100%)';
-            nextSlide.style.transform = 'translateX(0)';
-        } else if (direction === 'left-to-right') {
-            previousSlide.style.transform = 'translateX(100%)';
-            nextSlide.style.transform = 'translateX(0)';
-        }
 
         // Update the indicators
         this.indicators[this.currentIndex].classList.remove('active');
