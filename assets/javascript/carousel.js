@@ -26,7 +26,6 @@ class CarouselComponent extends HTMLElement {
             if (index === 0) indicator.classList.add('active');
             indicators.appendChild(indicator);
         });
-        
 
         // Append elements to the shadow DOM
         this.shadowRoot.append(wrapper, indicators);
@@ -34,74 +33,83 @@ class CarouselComponent extends HTMLElement {
         // Add styles
         const style = document.createElement('style');
         style.textContent = `
-    .carousel {
-        width: 100%;
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 30%;
-        grid-column-gap: 1rem;
-        scroll-snap-type: inline mandatory;
-        overflow-x: scroll;
-        flex-shrink: 0;
-        max-width: calc(var(--content-max-width) * 2); 
-        margin: 0 auto;
-    }
-    .carousel::-webkit-scrollbar {
-        display: none;
-    }
-    .slide {
-        width: 100%;
-        transition: transform 0.5s ease;
-        margin: 0 32px;
-    }
-    .slide.active {
-        opacity: 1;
-        position: relative;
-    }
-    .slide:not(.active) {
-        transform: scale(1);
-    }
-    .indicators {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        margin-top: 16px;
-    }
-    .indicator {
-        width: 10px;
-        height: 10px;
-        background-color: #ffd700;
-        opacity: 0.5;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-    .indicator.active {
-        opacity: 1;
-        width: 13px;
-        height: 13px;
-        background-color: #ffd700; /* Gold color to match the small circles in your reference */
-    }
+            .carousel {
+                width: 100%;
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: 30%;
+                grid-column-gap: 1rem;
+                scroll-snap-type: inline mandatory;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                flex-shrink: 0;
+                max-width: calc(var(--content-max-width) * 2); 
+                margin: 0 auto;
+                scrollbar-width: none;
+            }
+            .carousel::-webkit-scrollbar {
+                display: none;
+            }
+            .slide {
+                display: flex; /* Apply flexbox */
+                flex-direction: column; /* Stack children vertically */
+                justify-content: stretch; /* Stretch to fill the available height */
+                width: 100%;
+                scroll-snap-align: center;
+                transition: transform 0.5s ease;
+                margin: 0 32px;
+            }
+            .slide.active {
+                opacity: 1;
+                position: relative;
+            }
+            .slide:not(.active) {
+                transform: scale(1);
+            }
+            .indicators {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                margin-top: 16px;
+            }
+            .indicator {
+                width: 10px;
+                height: 10px;
+                background-color: #ffd700;
+                opacity: 0.5;
+                border-radius: 50%;
+                margin: 0 5px;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+            .indicator.active {
+                opacity: 1;
+                width: 13px;
+                height: 13px;
+                background-color: #ffd700; /* Gold color to match the small circles in your reference */
+            }
 
-    media (max-width: 768px) {
-        .carousel {
-            grid-auto-columns: 100%;
-        }
+            @media (max-width: 768px) {
+                .carousel {
+                    grid-auto-columns: 70%;
+                    max-width: calc(var(--content-max-width) * 5); 
+                }
 
-        .indicators {
-            display: flex;
-        }
-    }
- `;
+                .indicators {
+                    display: flex;
+                }
+            }
+        `;
         this.shadowRoot.append(style);
 
         this.currentIndex = 0;
         this.slides = this.shadowRoot.querySelectorAll('.slide');
         this.indicators = this.shadowRoot.querySelectorAll('.indicator');
+        this.wrapper = wrapper;
+
         // Swipe variables
         this.startX = 0;
-        this.endX = 0;
+        this.currentX = 0;
         this.isDragging = false;
 
         // Touch event listeners for swipe
@@ -109,34 +117,38 @@ class CarouselComponent extends HTMLElement {
         wrapper.addEventListener('touchmove', (e) => this.touchMove(e));
         wrapper.addEventListener('touchend', () => this.touchEnd());
 
-
         // Mouse event listeners for drag
         wrapper.addEventListener('mousedown', (e) => this.mouseDown(e));
         wrapper.addEventListener('mousemove', (e) => this.mouseMove(e));
         wrapper.addEventListener('mouseup', () => this.mouseUp());
         wrapper.addEventListener('mouseleave', () => this.mouseLeave());
 
+        // Scroll event listener to update active indicator
+        wrapper.addEventListener('scroll', () => this.updateActiveIndicator());
+
         this.indicators.forEach((indicator, index) => {
-            // const direction = index > this.currentIndex ? 'right-to-left' : 'left-to-right';
-            indicator.addEventListener('click', () => this.showSlide(index));
+            indicator.addEventListener('click', () => this.scrollToSlide(index));
         });
     }
 
     touchStart(e) {
         this.startX = e.touches[0].clientX;
+        this.isDragging = true;
     }
 
     touchMove(e) {
-        this.endX = e.touches[0].clientX;
+        this.currentX = e.touches[0].clientX;
     }
 
     touchEnd() {
+        this.isDragging = false;
         this.handleSwipeOrDrag();
     }
 
     mouseDown(e) {
         this.startX = e.clientX;
         this.isDragging = true;
+        this.currentX = e.clientX; // Reset currentX at the start of drag 
     }
 
     mouseMove(e) {
@@ -160,38 +172,55 @@ class CarouselComponent extends HTMLElement {
     }
 
     handleSwipeOrDrag() {
-        if (this.startX > this.currentX) {
+        const distanceMoved = this.startX - this.currentX;
+        const slideWidth = this.slides[0].offsetWidth + parseFloat(getComputedStyle(this.slides[0]).marginRight);
+        const threshold = slideWidth / 8; // Threshold to determine if the slide should change
+
+        if (distanceMoved > threshold) {
             this.showNextSlide();
-        } else if (this.startX < this.currentX) {
+        } else if (distanceMoved < -threshold) {
             this.showPrevSlide();
+        } else {
+            this.scrollToSlide(this.currentIndex); // Return to the current slide if not moved enough
+        }
+    }
+
+    scrollToSlide(index) {
+        const slideWidth = this.slides[index].offsetWidth + parseFloat(getComputedStyle(this.slides[index]).marginRight);
+        this.wrapper.scrollTo({
+            left: slideWidth * index,
+            behavior: 'smooth'
+        });
+
+        if (!this.isDragging) {
+            this.showSlide(index);
         }
     }
 
     showPrevSlide() {
-        this.showSlide((this.currentIndex - 1 + this.slides.length) % this.slides.length);
+        const newIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+        this.scrollToSlide(newIndex);
     }
 
     showNextSlide() {
-        this.showSlide((this.currentIndex + 1) % this.slides.length);
+        const newIndex = (this.currentIndex + 1) % this.slides.length;
+        this.scrollToSlide(newIndex);
     }
-
     showSlide(index) {
-        const previousSlide = this.slides[this.currentIndex];
-        const nextSlide = this.slides[index];
-
-        // Remove active class from the current slide
-        previousSlide.classList.remove('active');
-
-        // Force a reflow to apply the transformation immediately
-        void nextSlide.offsetWidth;
-
-        // Add active class to the next slide
-        nextSlide.classList.add('active');
-
-        // Update the indicators
+        this.slides[this.currentIndex].classList.remove('active');
+        this.slides[index].classList.add('active');
         this.indicators[this.currentIndex].classList.remove('active');
         this.currentIndex = index;
         this.indicators[this.currentIndex].classList.add('active');
+    }
+
+    updateActiveIndicator() {
+        const slideWidth = this.slides[0].offsetWidth + parseFloat(getComputedStyle(this.slides[0]).marginRight);
+        const scrollPosition = this.wrapper.scrollLeft;
+        const index = Math.round(scrollPosition / slideWidth);
+        if (index !== this.currentIndex) {
+            this.showSlide(index);
+        }
     }
 }
 
