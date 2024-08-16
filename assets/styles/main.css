@@ -62,6 +62,11 @@ body {
   font-size: 12px;
   padding-bottom: 64px;
   position: relative;
+  color: var(--mp-color-black);
+  background-color: var(--mp-color-white);
+}
+
+.hejbit-body {
   color: var(--mp-color-white);
   background-color: var(--mp-color-black);
 }
