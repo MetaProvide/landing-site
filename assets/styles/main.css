@@ -124,15 +124,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0px auto;
-  margin-left: 5vw;
-  margin-bottom: 64px;
+  max-width: calc(var(--content-max-width) * 2);
+  margin-top: 16px;
 }
 
 .nav-list {
   margin-left: 0;
   padding-left: 0;
   list-style: none;
-  width: 100%;
+  width: 70%;
   display: flex;
   justify-content: space-evenly;
 }
