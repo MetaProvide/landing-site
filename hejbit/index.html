@@ -53,7 +53,6 @@
       <li class="nav-item"><a href="/hejbit">Hejbit</a></li>
       <li class="nav-item"><a href="/contact">Contact</a></li>
       <li class="nav-item"><a href="/blog">Blog</a></li>
-      <li class="nav-item"><a class="btn donationButton">Donate</a></li>
     </ul>
   </nav>
     <section class="mt-64">
@@ -204,7 +203,9 @@
       </section>
 
       <section>
-        <form action="#" method="post">
+        <h2 class="hejbit-yellow">Contact us</h2>
+        <div id="form-message"></div>
+        <form action="#" method="post" id="hejbit-contact-form">
           <div>
             <input class="hejbit-input m-0-auto" type="text" name="name" placeholder="Name" />
           </div>
@@ -220,6 +221,56 @@
         </form>
       </section>
 
+      <script>
+        document.getElementById('hejbit-contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const name = event.target.name.value;
+            const company = event.target.company.value;
+            const email = event.target.email.value;
+        
+            const formMessageElement = document.getElementById('form-message');
+            fetch('https://api.brevo.com/v3/smtp/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // This is bad but it works for now. TODO: Get the API key from the environment variables using backend
+                    'api-key': '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',
+                },
+                body: JSON.stringify({
+                    sender: { name: "Hejbit by MetaProvide", email: "tech@metaprovide.org" },
+                    to: [{ email: email, name: name }],
+                    subject: "Thank you for contacting us!",
+                    htmlContent: `<h1>Hello ${name} from ${company}</h1><p>Thank you for reaching out. We will get back to you shortly.</p>`,
+                    params: {
+                        company: company,
+                        name: name
+                    }
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+
+                if (data.messageId) {
+                    formMessageElement.innerHTML = '<p class="message-success">Your message was sent successfully!</p>';
+                } else {
+                  formMessageElement.innerHTML = '<p class="message-fail">There was an error sending your message!</p>';
+                }
+
+                setTimeout(() => {
+                    formMessageElement.innerHTML = '';
+                }, 5000);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formMessageElement.innerHTML = '<p class="message-fail">There was an error sending your message!</p>';
+
+                setTimeout(() => {
+                    formMessageElement.innerHTML = '';
+                }, 5000);
+            });
+        });
+        </script>
 </body>
 
 </html>

@@ -28,6 +28,7 @@
   --mp-hejbit-blue: #2E80DD;
   --mp-color-darkgreen: #00796e;
   --mp-color-green: #00ad90;
+  --mp-color-red: #da4040;
   --mp-color-lightcyan: #cefffb;
   /* --mp-color-lightcyan: #bffff9; */
   --mp-color-cyan: #80fff3;
@@ -516,6 +517,26 @@ textarea.hejbit-textarea {
   font-size: 1.9rem;
 }
 
+.message-success {
+  color: var(--mp-color-green);
+  font-weight: 700;
+  padding: 16px;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.message-fail {
+  color: var(--mp-color-red);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding: 16px;
+  text-align: center;
+}
+
 .hamburger-lines {
   display: none;
 }
@@ -715,8 +736,13 @@ nav .checkbox {
     max-width: none;
   }
 
+  .logo-wrapper {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
   nav .logo-wrapper img {
-    width: 50%;
+    width: 100%;
   }
 
   nav .checkbox {
@@ -736,8 +762,8 @@ nav .checkbox {
     height: 26px;
     width: 32px;
     position: absolute;
-    top: 17px;
-    left: calc(100% - 50px);
+    top: 32px;
+    left: calc(100% - 60px);
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -749,7 +775,7 @@ nav .checkbox {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #0e2431;
+    background: var(--mp-hejbit-yellow);
   }
 
   .hamburger-lines .line1 {
@@ -791,7 +817,7 @@ nav .checkbox {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #0e2431;
+    background: var(--mp-hejbit-yellow);
   }
 
   nav .hamburger-lines .line1 {
