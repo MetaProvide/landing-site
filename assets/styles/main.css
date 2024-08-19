@@ -391,9 +391,9 @@ video {
 }
 
 .posts-list-item p {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 500;
-  color: black;
+  color: var(--grey-800-color);
 }
 
 .posts-list-item img {
@@ -443,7 +443,7 @@ video {
 
 .team-member-title {
   margin: 8px auto;
-  color: var(--grey-600-color);
+  color: var(--mp-hejbit-yellow);
 }
 
 .team-member-card .team-member-info {
