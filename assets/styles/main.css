@@ -22,7 +22,7 @@
 :root {
   /* MetaProvide Color Palette */
   --mp-color-white: rgb(242, 242, 242);
-  --mp-color-black: #212121;
+  --mp-color-black: #262626;
   --mp-color-gold: #fab429;
   --mp-hejbit-yellow: #FFCD00;
   --mp-hejbit-blue: #2E80DD;
@@ -30,15 +30,11 @@
   --mp-color-green: #00ad90;
   --mp-color-red: #da4040;
   --mp-color-lightcyan: #cefffb;
-  /* --mp-color-lightcyan: #bffff9; */
   --mp-color-cyan: #80fff3;
 
 
   --primary-color: #00ad90;
   --secondary-color: var(var(--mp-color-black));
-  /* --website-max-width: 1440px; */
-  /* --content-max-width: 1200px; */
-  /* --website-max-width: 900px; */
   --content-max-width: 720px;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
@@ -62,8 +58,8 @@ body {
   font-size: 12px;
   padding-bottom: 64px;
   position: relative;
-  color: var(--mp-color-black);
-  background-color: var(--mp-color-white);
+  color: var(--mp-color-white);
+  background-color: var(--mp-color-black);
 }
 
 .hejbit-body {
@@ -276,7 +272,7 @@ section {
 .little-bit-more-section,
 .what-is-swarm-section {
   padding: 32px 84px;
-  background-color: var(--mp-color-lightcyan);
+  background-color: var(--grey-600-color);
 }
 
 .little-bit-more-section {
@@ -291,7 +287,7 @@ section {
 .video-section {
   padding: 0 24px;
   padding-bottom: 64px;
-  background-color: var(--mp-color-lightcyan);
+  background-color: var(--grey-600-color);
 }
 
 img {
