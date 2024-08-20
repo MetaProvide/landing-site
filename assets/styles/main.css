@@ -127,7 +127,8 @@ nav {
   align-items: center;
   margin: 0px auto;
   max-width: calc(var(--content-max-width) * 2);
-  margin-top: 16px;
+  padding-top: 24px;
+  padding-left: 32px;
 }
 
 .nav-list {
