@@ -31,8 +31,6 @@
   --mp-color-red: #da4040;
   --mp-color-lightcyan: #cefffb;
   --mp-color-cyan: #80fff3;
-
-
   --primary-color: #00ad90;
   --secondary-color: var(var(--mp-color-black));
   --content-max-width: 720px;
