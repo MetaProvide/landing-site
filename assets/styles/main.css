@@ -62,6 +62,7 @@ body {
 .hejbit-body {
   color: var(--mp-color-white);
   background-color: var(--mp-color-black);
+  padding: 0 16px;
 }
 
 .wave {
