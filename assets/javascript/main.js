@@ -21,6 +21,12 @@ function setupAnalytics() {
 }
 
 // Util functions
+
+function scrollToEl(elementId) {
+    const element = document.getElementById(elementId);
+    element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+  }
+
 function isVisible(element) {
     return element.offsetWidth > 0 && element.offsetHeight > 0;
 }

@@ -29,8 +29,26 @@
     flex-wrap: wrap;
 }
 
+.curved-border {
+    border-radius: 100px;
+}
+
+.box-small {
+    height: 30px;
+    width: 30px;
+}
+
 .p-8 {
     padding: 8px;
+}
+.p-16 {
+    padding: 16px;
+}
+.p-32 {
+    padding: 32px;
+}
+.p-64 {
+    padding: 64px;
 }
 
 .plr-8 {
@@ -65,7 +83,9 @@
 .mt-0 {
     margin-top: 0;
 }
-
+.mb-64 {
+    margin-bottom: 64px;
+}
 .mb-16 {
     margin-bottom: 16px;
 }
@@ -82,6 +102,11 @@
 
 .mr-16 {
     margin-right: 8px;
+}
+
+.mlr-0 {
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .mlr-8 {
@@ -122,6 +147,44 @@
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
 }
+
+/* Create three levels of font-size */
+.text-small {
+    font-size: 1rem; /* 14px if base is 16px */
+    line-height: 1rem;
+}
+
+.text-medium {
+    font-size: 1.5rem; /* 16px */
+    line-height: 1.25rem;
+
+}
+
+.text-large {
+    font-size: 1.75rem; /* 20px if base is 16px */
+    line-height: 2.5rem;
+}
+
+.text-xl {
+    font-size: 2rem; /* 20px if base is 16px */
+    line-height: 2.75rem;
+}
+.header-small {
+    font-size: 3rem;
+}
+
+.header-medium {
+    font-size: 4rem;
+}
+
+.header-large {
+    font-size: 5rem;
+}
+
+.header-xl {
+    font-size: 6rem;
+}
+
 
 .gap-8 {
     gap: 8px;
@@ -174,6 +237,10 @@
     background-color: var(--mp-hejbit-yellow);
 }
 
+.bg-black {
+    background-color: black;
+}
+
 .massive.ol.li  {
    font-size: xx-large; 
 }
@@ -186,6 +253,10 @@
 
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }
 
 .justify-center {
@@ -222,6 +293,10 @@
     width: 100%;
 }
 
+.w-content {
+    width: var(--content-max-width);
+}
+
 .m-0-auto {
     margin: 0 auto;
 }
@@ -230,11 +305,19 @@
     max-width: 100%;
 }
 
+.max-w-75p {
+    max-width: 75%;
+}
+
 .min-w-100vw {
     min-width: 100vw;
 }
 
-section.fullscreen-section {
+.contained-section {
+    max-width: var(--content-max-width);
+}
+
+.fullscreen-section {
     min-height: 100vh;
     width: 100vw;
     max-width: 100vw;
@@ -244,5 +327,5 @@ section.fullscreen-section {
     align-items: center;
     padding: 2rem;
     box-sizing: border-box;
-  }
+}
   

@@ -38,12 +38,12 @@ class CarouselComponent extends HTMLElement {
                 display: grid;
                 grid-auto-flow: column;
                 grid-auto-columns: 30%;
-                grid-column-gap: 1rem;
+                grid-column-gap: 32px;
                 scroll-snap-type: inline mandatory;
                 overflow-x: scroll;
                 overflow-y: hidden;
                 flex-shrink: 0;
-                max-width: calc(var(--content-max-width) * 2); 
+                max-width: calc(var(--content-max-width) * 2.125); 
                 margin: 0 auto;
                 scrollbar-width: none;
             }
