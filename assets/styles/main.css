@@ -1018,6 +1018,25 @@ nav .checkbox {
 }
 
 /* contact */
+
+.custom-captcha {
+  background-color: var(--mp-hejbit-blue) !important;
+  border: none !important;
+  border-radius: 100px;
+  padding: 20px;
+  color: white !important;
+}
+
+.custom-captcha button {
+  margin: 8px 4px !important;
+  padding: 6px 32px !important;
+}
+
+.custom-captcha .frc-banner {
+  right: 45px !important;
+}
+
+
 .form-text {
   color: var(--grey-600-color);
 }

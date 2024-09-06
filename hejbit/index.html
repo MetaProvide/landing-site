@@ -51,6 +51,8 @@
     <script src="https://cmp.osano.com/16CPXqTjn7XMBxF/5bde6be5-1af9-4cd4-aa09-875fe58b0043/osano.js"></script>
     <script src="../assets/javascript/main.js" defer></script>
     <script src="../assets/javascript/carousel.js" defer></script>
+    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.12/widget.module.min.js" async defer></script>
+    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.12/widget.min.js" async defer></script>
   </head>
 
   <body class="hejbit-body">
@@ -356,6 +358,10 @@
             required
           />
         </div>
+        <div id="captcha-entrypoint" class="flex-row center">
+          <!-- <div class="frc-captcha mt-8 mb-16 custom-captcha" 
+                data-sitekey="FCMHP1D2JKQ1BBI1"></div> -->
+        </div>
         <div class="w-100">
           <button class="hejbit-button w-100" type="submit">
             Follow-up with our Sales
@@ -365,13 +371,43 @@
     </section>
 
     <script>
-      document
-        .getElementById("hejbit-contact-form")
-        .addEventListener("submit", async function (event) {
+      formEl = document
+        .getElementById("hejbit-contact-form");
+
+        formEl.addEventListener("input", function (_) {
+          // ensure all fields are filled
+          const formData = new FormData(formEl);
+          const name = formData.get("name");
+          const company = formData.get("company");
+          const email = formData.get("email");
+
+          // add captcha element to form if all fiels are filled
+          console.log("name", name);
+          console.log("company", company);
+          console.log("email", email);
+          
+          if (name && company && email) {
+            console.log(
+              "All fields are filled, adding captcha element to form"
+            );
+            
+            addCaptchaTo('captcha-entrypoint');
+          }
+        });
+
+        formEl.addEventListener("submit", async function (event) {
           event.preventDefault();
 
           const formData = new FormData(event.target);
           const messageElement = document.getElementById("form-message");
+
+          // Verify Friendly Captcha
+          const captchaResponse = document.querySelector('.frc-captcha-solution').value;
+          if (!captchaResponse) {
+              messageElement.innerHTML =
+                '<p class="message-fail">Please complete the captcha</p>';
+              return;
+          }
 
           try {
             const response = await fetch(
@@ -390,6 +426,8 @@
             if (response.ok) {
               messageElement.innerHTML =
                 '<p class="message-success">Your message was sent successfully!</p>';
+              // clear form
+              event.target.reset();
             } else {
               messageElement.innerHTML =
                 '<p class="message-fail">There was an error: ' +

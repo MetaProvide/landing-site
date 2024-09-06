@@ -21,6 +21,25 @@ function setupAnalytics() {
 }
 
 // Util functions
+function addCaptchaTo(elementId) {
+    const captchaDiv = document.createElement('div');
+    captchaDiv.className = 'frc-captcha mt-8 mb-16 custom-captcha';
+    captchaDiv.setAttribute('data-sitekey', 'FCMHP1D2JKQ1BBI1');
+    const entryEl = document.getElementById(elementId);
+    // check if entryEl has no children
+    console.log(entryEl.children.length);
+    
+    if (entryEl.children.length === 0) {
+        entryEl.appendChild(captchaDiv);
+        
+        // Initialize the captcha
+        if (window.friendlyChallenge) {
+            console.log(window.friendlyChallenge);
+            
+            new window.friendlyChallenge.WidgetInstance(captchaDiv);
+        }
+    }
+}
 
 function scrollToEl(elementId) {
     const element = document.getElementById(elementId);
