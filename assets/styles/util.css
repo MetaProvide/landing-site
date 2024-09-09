@@ -95,7 +95,9 @@
 .mb-4 {
     margin-bottom: 4px;
 }
-
+.mb-0 {
+    margin-bottom: 0px;
+}
 .mr-8 {
     margin-right: 8px;
 }
@@ -169,6 +171,11 @@
     font-size: 2rem; /* 20px if base is 16px */
     line-height: 2.75rem;
 }
+
+.header-smaller {
+    font-size: 2rem;
+}
+
 .header-small {
     font-size: 3rem;
 }
@@ -216,6 +223,10 @@
     margin: auto;
 }
 
+.max-w-100vw {
+    max-width: 100vw;
+}
+
 .white {
     color: var(--mp-color-white);
 }
@@ -235,6 +246,10 @@
 
 .bg-hejbit-yellow {
     background-color: var(--mp-hejbit-yellow);
+}
+
+.bg-hejbit-secondary {
+    background-color: var(--mp-hejbit-2nd-blue);
 }
 
 .bg-black {

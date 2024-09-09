@@ -38,7 +38,7 @@ class CarouselComponent extends HTMLElement {
                 display: grid;
                 grid-auto-flow: column;
                 grid-auto-columns: 30%;
-                grid-column-gap: 32px;
+                grid-column-gap: 48px;
                 scroll-snap-type: inline mandatory;
                 overflow-x: scroll;
                 overflow-y: hidden;
