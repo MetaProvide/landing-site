@@ -65,6 +65,9 @@
     margin-top: 32px;
     margin-bottom: 32px;
 }
+.mt-128 {
+    margin-top: 128px;
+}
 .mt-64 {
     margin-top: 64px;
 }
@@ -213,6 +216,10 @@
     width: 200px;
 }
 
+.min-h-100vh {
+    min-height: 100vh;
+}
+
 .max-w-800 {
     max-width: 800px;
     margin: auto;
@@ -343,4 +350,3 @@
     padding: 2rem;
     box-sizing: border-box;
 }
-  
