@@ -142,24 +142,6 @@ function handleNewsletterSubmit(ev) {
     );
 }
 
-function setupModal(modalEL, openerEls, closerEl) {
-    function openModal(_) {
-        modalEL.style.display = "block";
-    }
-    Array.from(openerEls).forEach((el) => (el.onclick = openModal));
-
-    function closeModal() {
-        modalEL.style.display = "none";
-    }
-    closerEl.onclick = closeModal;
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modalEL) {
-            modal.style.display = "none";
-        }
-    };
-}
 
 function main(_) {
     // Analytics
@@ -213,21 +195,6 @@ function main(_) {
         });
     }
 
-    // Modal
-    const modalEl = document.getElementById("donationModal");
-    const modelOpenerEls = document.getElementsByClassName("donationButton");
-    const modelCloserEl = document.getElementsByClassName("close")[0];
-    setupModal(modalEl, modelOpenerEls, modelCloserEl);
-
-    // QR Codes for Crypto Donation
-    new QRCode(
-        document.querySelector("#donate-bitcoin"),
-        "bc1qvmuxes6g9fcpwp8yv0ull38zjvl0p9uuy8k4r5"
-    );
-    new QRCode(
-        document.querySelector("#donate-ether"),
-        "0xD6158881393BC572FB368Be1f7C8e1Aae39670dF"
-    );
 }
 
 window.addEventListener("DOMContentLoaded", main);
