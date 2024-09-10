@@ -93,7 +93,6 @@ class CarouselComponent extends HTMLElement {
                 .carousel {
                     grid-auto-columns: 80%;
                     gap: 16px;
-                    max-width: calc(var(--content-max-width) * 5); 
                 }
 
                 .indicators {
