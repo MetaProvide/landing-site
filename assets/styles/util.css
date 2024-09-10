@@ -297,6 +297,10 @@
     align-items: center;
 }
 
+.align-start {
+    align-items: start;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -351,9 +355,17 @@
     box-sizing: border-box;
 }
 
+.nowrap {
+    flex-wrap: nowrap;
+}
+
 /* add mobile view */
 @media screen and (max-width: 768px) {
     .mobile-max-w-100vw {
         max-width: 100%;
+    }
+
+    .mobile-p-16 {
+        padding: 16px;
     }
 }
