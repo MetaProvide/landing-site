@@ -47,6 +47,9 @@
 .p-32 {
     padding: 32px;
 }
+.p-48 {
+    padding: 48px;
+}
 .p-64 {
     padding: 64px;
 }
@@ -155,8 +158,8 @@
 
 /* Create three levels of font-size */
 .text-small {
-    font-size: 1rem; /* 14px if base is 16px */
-    line-height: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
 }
 
 .text-medium {
@@ -343,6 +346,17 @@
     max-width: var(--content-max-width);
 }
 
+.single-line-text {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.responsive-text,
+.responsive-text p,
+.responsive-text b {
+    font-size: clamp(0.5rem, 3vw, 1.4rem);
+}
+
 .fullscreen-section {
     min-height: 100vh;
     width: 100vw;
@@ -367,5 +381,13 @@
 
     .mobile-p-16 {
         padding: 16px;
+    }
+
+    .mobile-flex-column {
+        flex-direction: column;
+    }
+
+    .mobile-text-center {
+        text-align: center;
     }
 }

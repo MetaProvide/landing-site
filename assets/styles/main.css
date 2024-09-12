@@ -34,7 +34,7 @@
   --mp-color-cyan: #80fff3;
   --primary-color: #00ad90;
   --secondary-color: var(var(--mp-color-black));
-  --content-max-width: 720px;
+  --content-max-width: 840px;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
   --grey-500-color: #b4b4ba;
@@ -63,7 +63,6 @@ body {
 .hejbit-body {
   color: var(--mp-color-white);
   background-color: var(--mp-color-black);
-  padding: 0 16px;
 }
 
 .wave {
