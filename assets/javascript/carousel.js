@@ -50,6 +50,10 @@ class CarouselComponent extends HTMLElement {
             .carousel::-webkit-scrollbar {
                 display: none;
             }
+            ::marker {
+                font-size: 3.5rem;
+            }
+            
             .slide {
                 display: flex; /* Apply flexbox */
                 flex-direction: column; /* Stack children vertically */
