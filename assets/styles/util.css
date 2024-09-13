@@ -163,18 +163,18 @@
 }
 
 .text-medium {
-    font-size: 1.5rem; /* 16px */
+    font-size: 1.5rem;
     line-height: 1.25rem;
 
 }
 
 .text-large {
-    font-size: 1.75rem; /* 20px if base is 16px */
+    font-size: 2.0rem; 
     line-height: 2.5rem;
 }
 
 .text-xl {
-    font-size: 2rem; /* 20px if base is 16px */
+    font-size: 2.25rem; 
     line-height: 2.75rem;
 }
 
