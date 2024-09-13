@@ -89,7 +89,7 @@ class CarouselComponent extends HTMLElement {
                 background-color: #ffd700; /* Gold color to match the small circles in your reference */
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
                 .carousel {
                     grid-auto-columns: 80%;
                     gap: 16px;
