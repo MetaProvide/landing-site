@@ -52,6 +52,7 @@ class CarouselComponent extends HTMLElement {
             }
             ::marker {
                 font-size: 3.5rem;
+                color: #FFD800;
             }
             
             .slide {
