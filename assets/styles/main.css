@@ -26,6 +26,7 @@
   --mp-color-gold: #fab429;
   --mp-hejbit-yellow: #FFD800;
   --mp-hejbit-blue: #006ff9;
+  --mp-hejbit-2nd-blue: #3C4858;
   --mp-color-darkgreen: #00796e;
   --mp-color-green: #00ad90;
   --mp-color-red: #da4040;
@@ -33,7 +34,7 @@
   --mp-color-cyan: #80fff3;
   --primary-color: #00ad90;
   --secondary-color: var(var(--mp-color-black));
-  --content-max-width: 720px;
+  --content-max-width: 840px;
   --grey-900-color: #26262e;
   --grey-600-color: #696970;
   --grey-500-color: #b4b4ba;
@@ -62,7 +63,6 @@ body {
 .hejbit-body {
   color: var(--mp-color-white);
   background-color: var(--mp-color-black);
-  padding: 0 16px;
 }
 
 .wave {
@@ -319,6 +319,10 @@ video {
   border-radius: 4px;
 }
 
+.list-item::marker {
+  font-size: 2.5rem;
+}
+
 .image-wrapper {
   width: 100%;
   margin-top: 64px;
@@ -476,7 +480,7 @@ quote {
 
 .hejbit-button {
   background-color: var(--mp-hejbit-yellow);
-   color: black;
+   color: var(--mp-color-black);
    border: none;
    padding: 16px 32px;
    text-align: center;
@@ -498,11 +502,16 @@ input[type="text"].hejbit-input {
   background-color: var(--mp-hejbit-blue);
   color: white;
   border:none;
-  min-width: 70%;
+  width: 100%;
   padding: 16px 24px;
   border-radius: 24px;
   margin-bottom: 16px;
   font-size: 1.9rem;
+}
+
+input[type="text"].hejbit-input::placeholder {
+  color: white;
+  opacity: 0.75;
 }
 
 textarea.hejbit-textarea {
@@ -510,7 +519,7 @@ textarea.hejbit-textarea {
   background-color: var(--mp-hejbit-blue);
   color: white;
   border:none;
-  min-width: 70%;
+  width: 100%;
   padding: 16px 24px;
   border-radius: 24px;
   margin-bottom: 16px;
@@ -674,11 +683,18 @@ nav .checkbox {
     --content-max-width: 100vw !important;
   }
 
-  body {
+  html, body {
     overflow-x: hidden;
     width: 100%;
   }
   
+  .hejbit-body {
+    padding: 0;
+  }
+
+  .mobile-max-w-100p {
+    max-width: 100% !important;
+  }
 
   .modal-content {
     margin: auto !important;
@@ -1013,6 +1029,25 @@ nav .checkbox {
 }
 
 /* contact */
+
+.custom-captcha {
+  background-color: var(--mp-hejbit-blue) !important;
+  border: none !important;
+  border-radius: 100px;
+  padding: 20px;
+  color: white !important;
+}
+
+.custom-captcha button {
+  margin: 8px 4px !important;
+  padding: 6px 32px !important;
+}
+
+.custom-captcha .frc-banner {
+  right: 45px !important;
+}
+
+
 .form-text {
   color: var(--grey-600-color);
 }

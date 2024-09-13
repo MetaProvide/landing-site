@@ -21,6 +21,31 @@ function setupAnalytics() {
 }
 
 // Util functions
+function addCaptchaTo(elementId) {
+    const captchaDiv = document.createElement('div');
+    captchaDiv.className = 'frc-captcha mt-8 mb-16 custom-captcha';
+    captchaDiv.setAttribute('data-sitekey', 'FCMHP1D2JKQ1BBI1');
+    const entryEl = document.getElementById(elementId);
+    // check if entryEl has no children
+    console.log(entryEl.children.length);
+    
+    if (entryEl.children.length === 0) {
+        entryEl.appendChild(captchaDiv);
+        
+        // Initialize the captcha
+        if (window.friendlyChallenge) {
+            console.log(window.friendlyChallenge);
+            
+            new window.friendlyChallenge.WidgetInstance(captchaDiv);
+        }
+    }
+}
+
+function scrollToEl(elementId) {
+    const element = document.getElementById(elementId);
+    element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+  }
+
 function isVisible(element) {
     return element.offsetWidth > 0 && element.offsetHeight > 0;
 }
@@ -117,24 +142,6 @@ function handleNewsletterSubmit(ev) {
     );
 }
 
-function setupModal(modalEL, openerEls, closerEl) {
-    function openModal(_) {
-        modalEL.style.display = "block";
-    }
-    Array.from(openerEls).forEach((el) => (el.onclick = openModal));
-
-    function closeModal() {
-        modalEL.style.display = "none";
-    }
-    closerEl.onclick = closeModal;
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modalEL) {
-            modal.style.display = "none";
-        }
-    };
-}
 
 function main(_) {
     // Analytics
@@ -188,21 +195,6 @@ function main(_) {
         });
     }
 
-    // Modal
-    const modalEl = document.getElementById("donationModal");
-    const modelOpenerEls = document.getElementsByClassName("donationButton");
-    const modelCloserEl = document.getElementsByClassName("close")[0];
-    setupModal(modalEl, modelOpenerEls, modelCloserEl);
-
-    // QR Codes for Crypto Donation
-    new QRCode(
-        document.querySelector("#donate-bitcoin"),
-        "bc1qvmuxes6g9fcpwp8yv0ull38zjvl0p9uuy8k4r5"
-    );
-    new QRCode(
-        document.querySelector("#donate-ether"),
-        "0xD6158881393BC572FB368Be1f7C8e1Aae39670dF"
-    );
 }
 
 window.addEventListener("DOMContentLoaded", main);

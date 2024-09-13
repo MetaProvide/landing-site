@@ -38,12 +38,12 @@ class CarouselComponent extends HTMLElement {
                 display: grid;
                 grid-auto-flow: column;
                 grid-auto-columns: 30%;
-                grid-column-gap: 1rem;
+                grid-column-gap: 48px;
                 scroll-snap-type: inline mandatory;
                 overflow-x: scroll;
                 overflow-y: hidden;
                 flex-shrink: 0;
-                max-width: calc(var(--content-max-width) * 2); 
+                max-width: calc(var(--content-max-width) * 2.125); 
                 margin: 0 auto;
                 scrollbar-width: none;
             }
@@ -89,15 +89,16 @@ class CarouselComponent extends HTMLElement {
                 background-color: #ffd700; /* Gold color to match the small circles in your reference */
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
                 .carousel {
-                    grid-auto-columns: 70%;
-                    max-width: calc(var(--content-max-width) * 5); 
+                    grid-auto-columns: 80%;
+                    gap: 16px;
                 }
 
                 .indicators {
                     display: flex;
                 }
+
             }
         `;
         this.shadowRoot.append(style);
