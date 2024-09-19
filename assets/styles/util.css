@@ -354,7 +354,11 @@
 .responsive-text,
 .responsive-text p,
 .responsive-text b {
-    font-size: clamp(0.5rem, 3vw, 1.4rem);
+    font-size: clamp(0.7rem, 4vw, 1.7rem);
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 .fullscreen-section {
@@ -369,7 +373,7 @@
     box-sizing: border-box;
 }
 
-.nowrap {
+.flex-nowrap {
     flex-wrap: nowrap;
 }
 
@@ -389,5 +393,9 @@
 
     .mobile-text-center {
         text-align: center;
+    }
+
+    .mobile-wrap {
+        white-space: normal;
     }
 }

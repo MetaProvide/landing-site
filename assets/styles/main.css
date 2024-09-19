@@ -321,7 +321,7 @@ video {
 
 .list-item::marker {
   font-size: 3.5rem;
-  color: var(--mp-hejbit-yellow);
+  color: var(--mp-hejbit-blue);
 }
 
 .image-wrapper {
