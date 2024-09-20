@@ -649,6 +649,14 @@ nav .checkbox {
   filter: grayscale(1);
 }
 
+.bullet-point {
+  font-size: 8rem;
+  line-height: 1rem;
+  margin-right: 1rem;
+  transform: scaleX(1.4) translateY(1%);
+  color: var(--mp-hejbit-yellow);
+}
+
 
 @media (max-width: 700px) {
 
