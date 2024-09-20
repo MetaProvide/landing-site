@@ -54,6 +54,38 @@
     padding: 64px;
 }
 
+.pt-8 {
+    padding-top: 8px;
+}
+.pt-16 {
+    padding-top: 16px;
+}
+.pt-32 {
+    padding-top: 32px;
+}
+.pt-48 {
+    padding-top: 48px;
+}
+.pt-64 {
+    padding-top: 64px;
+}
+
+.pb-8 {
+    padding-bottom: 8px;
+}
+.pb-16 {
+    padding-bottom: 16px;
+}
+.pb-32 {
+    padding-bottom: 32px;
+}
+.pb-48 {
+    padding-bottom: 48px;
+}
+.pb-64 {
+    padding-bottom: 64px;
+}
+
 .plr-8 {
     padding-left: 8px;
     padding-right: 8px;
@@ -385,6 +417,10 @@
 
     .mobile-p-16 {
         padding: 16px;
+    }
+
+    .mobile-p-32 {
+        padding: 32px;
     }
 
     .mobile-flex-column {

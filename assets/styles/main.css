@@ -351,36 +351,6 @@ video {
   max-width: 300px;
 }
 
-.carousel-wrapper {
-  margin-bottom: 16px;
-}
-
-.areas-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.area-card {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: var(--grey-600-color);
-}
-
-.area-card p {
-  margin-top: 0px;
-  margin-bottom: 24px;
-}
-
-.area-card div {
-  text-align: center;
-}
-
-.area-card img {
-  width: 100%;
-}
-
 .posts-list {
   margin: 0;
   padding: 0;
