@@ -320,8 +320,10 @@ video {
 }
 
 .list-item::marker {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   color: var(--mp-hejbit-blue);
+  position: relative;
+  top: 5px;
 }
 
 .image-wrapper {
@@ -779,11 +781,13 @@ nav .checkbox {
   .nav-list {
     display: flex;
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 1;
+    margin: 0;
     width: 100vw;
-    height: 110vh;
-    background-color: rgba(255, 255, 255, 0.95);
-    transform: translate(-150%);
+    height: 100vh;
+    background-color: var(--mp-color-white);
     transition: transform 0.5s ease-in-out;
     text-align: center;
     flex-direction: column;
@@ -819,7 +823,7 @@ nav .checkbox {
   }
 
   .nav-list.open {
-    transform: translateY(45%);
+    transform: translateX(-100%);
   }
 
   nav input[type="checkbox"]:checked~.hamburger-lines .line1 {
