@@ -191,12 +191,12 @@
 /* Create three levels of font-size */
 .text-small {
     font-size: 1.225rem;
-    line-height: 1.225rem;
+    line-height: 1.525rem;
 }
 
 .text-medium {
     font-size: 1.5rem;
-    line-height: 1.25rem;
+    line-height: 2.0rem;
 
 }
 
