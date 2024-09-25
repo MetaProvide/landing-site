@@ -987,6 +987,15 @@ nav .checkbox {
   cursor: pointer;
 }
 
+.swarm-logo {
+  transform: rotate(-90deg) scale(1.8); /* Rotate by 90 degrees */
+  transform-origin: center; /* Ensure rotation happens around the center */
+  max-width: 800px;  /* Set new width */
+  max-height: 400px; /* Set new height */
+  aspect-ratio: 2;
+  pointer-events: none;
+}
+
 
 /* contact */
 

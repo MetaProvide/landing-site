@@ -121,6 +121,9 @@
 .mt-0 {
     margin-top: 0;
 }
+.mb-128 {
+    margin-bottom: 128px;
+}
 .mb-64 {
     margin-bottom: 64px;
 }
@@ -241,6 +244,10 @@
 
 .gap-36 {
     gap: 36px;
+}
+
+.gap-64 {
+    gap: 64px;
 }
 
 .m-auto {
