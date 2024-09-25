@@ -441,4 +441,12 @@
     .mobile-wrap {
         white-space: normal;
     }
+
+    .mobile-one-column {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-w-70vw {
+        width: 70vw;
+    }
 }
