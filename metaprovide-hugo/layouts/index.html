@@ -174,29 +174,15 @@
 <section class="pt-32">
     <h2>Latest Blogs</h2>
     <div class="three-columns gap-8 max-w-content">
+    <!-- {{ range (first 3 (where .Site.Pages "Type" "blog").ByDate ) }}
         <div class="block-hover p-8">
-            <a href="./blog/are-decentralized-solutions-really-complicated">
-                <img height="300" src="{{ "images/decentralised-with-logo.jpeg" | relURL }}" alt="Decentralized solutions" />
-                <h3>Are Decentralised Data Solution Really That Complicated?</h3>
-                <p>September 2024</p>
+            <a href="{{ .Permalink }}">
+                <img class="object-fit-cover" src="{{ .Params.mainImage }}" alt="{{ .Title }}" />
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Date.Format "January 2006" }}</p>
             </a>
         </div>
-        <div class="block-hover p-8">
-            <a href="./blog/the-illusion-of-security">
-                <img height="300" src="{{ "images/the-illusion-of-security.png" | relURL }}"  alt="The Illusion security" />
-                <h3>The Illusion of Security: Centralised Data in the Modern Age</h3>
-                <p>September 2024</p>
-            </a>
-        </div>
-        <div class="block-hover p-8">
-            <a href="./blog/adminly-customer-coordination-platform">
-                <img height="300" src="{{ "images/feedback-1977987_1280.jpg" | relURL }}"
-                    alt="Customer Coordination Platforms" />
-                <h3>Customer Coordination Platforms</h3>
-                <p>November 2023</p>
-            </a>
-        </div>
-
+      {{ end }} -->
     </div>
 </section>
 {{ end }}

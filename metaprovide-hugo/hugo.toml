@@ -1,3 +1,9 @@
 baseURL = 'https://metaprovide.org/'
 languageCode = 'en-us'
 title = 'MetaProvide'
+
+[permalinks]
+blog = "/blog/:slug/"
+
+[params]
+description = "Follow MetaProvide to enable data decentralization"

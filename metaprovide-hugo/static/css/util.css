@@ -191,6 +191,10 @@
     transform-origin: 50% 50%;
 }
 
+.object-fit-cover {
+    object-fit: cover;
+}
+
 /* Create three levels of font-size */
 .text-small {
     font-size: 1.225rem;
@@ -299,10 +303,6 @@
 
 .bg-hejbit-secondary {
     background-color: var(--mp-hejbit-2nd-blue);
-}
-
-.bg-grey {
-    background-color: var(--grey-600-color);
 }
 
 .bg-black {

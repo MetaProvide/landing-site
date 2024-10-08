@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <article class="max-w-content">
+        <h1>{{ .Title }}</h1>
+        <p>
+            <img src="{{ .Params.mainImage }}" alt="{{ .Title }}" />
+        </p>
+        <p>{{ .Content }}</p>
+    </article>
+{{ end }}
