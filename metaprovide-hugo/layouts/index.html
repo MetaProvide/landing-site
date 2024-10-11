@@ -6,17 +6,14 @@
             <b>Decentralised</b>.
         </h1>
 
-        <p class="hero-text" style="max-width: 80%;">We are a team of programmers, product developers, administrators,
-            communicators, and a
-            former Buddhist monk
-            who started it all. We are here to make a difference, through the services that we’re building.</p>
+        <p class="hero-text" style="max-width: 80%;">{{ .Params.heroSubHeader }}</p>
     </div>
 </section>
 <section class="little-bit-more-section">
     <div class="max-w-content">
     <h2 class="mb-16">Get to know a little bit more about MetaProvide</h2>
 
-    <div class="max-w-content three-columns gap-24 mb-32">
+    <div class="max-w-content three-columns gap-24 mb-32 mobile-one-column">
         <div class="flex-column align-center">
             <div style="max-height: 250px; max-width: 250px;">
                 <img src="{{ "images/tag_trans.png" | relURL }}" alt="tag icon">
@@ -60,7 +57,7 @@
 
 <section class="pb-64 pt-32">
     <h2>Our Testimonials</h2>
-    <div class="gap-36 max-w-content two-columns">
+    <div class="gap-36 max-w-content two-columns mobile-one-column">
         <div class="flex-row flex-nowrap align-center gap-36 mobile-flex-column">
             <img class="testamonial-image" src="{{ "images/Viktor.png" | relURL }}" alt="#">
             <div class="flex-column mb-16">
@@ -161,20 +158,20 @@
             blockchain
             and powered by the xBZZ token, making it economically self-sustaining.
         </p>
-        <div class="three-columns max-w-content m-auto justify-between align-center">
-            <img style="height: 200px; justify-self: center" class="rotate90 w-200"
+        <div class="three-columns max-w-content m-auto justify-between align-center mobile-one-column">
+            <img style="max-height: 200px; justify-self: center" class="rotate90 max-w-200"
                 src="{{ "images/The Living Core Logo.svg" | relURL }}" alt="log1">
-            <img style="height: 200px; justify-self: center" class="rotate90 w-200" src="{{ "images/Envelop Logo.svg" | relURL }}"
+            <img style="max-height: 200px; justify-self: center" class="rotate90 max-w-200" src="{{ "images/Envelop Logo.svg" | relURL }}"
                 alt="log2">
-            <img style="height: 100px;" src="{{ "images/Company3 Logo.svg" | relURL }}" alt="log3">
+            <img style="max-height: 100px;" src="{{ "images/Company3 Logo.svg" | relURL }}" alt="log3">
         </div>
     </div>
 </section>
 
 <section class="pt-32">
     <h2>Latest Blogs</h2>
-    <div class="three-columns gap-8 max-w-content">
-    <!-- {{ range (first 3 (where .Site.Pages "Type" "blog").ByDate ) }}
+    <div class="three-columns gap-8 max-w-content mobile-one-column">
+        {{ range (where site.RegularPages "Section" "blog" | first 3) }}
         <div class="block-hover p-8">
             <a href="{{ .Permalink }}">
                 <img class="object-fit-cover" src="{{ .Params.mainImage }}" alt="{{ .Title }}" />
@@ -182,7 +179,7 @@
                 <p>{{ .Date.Format "January 2006" }}</p>
             </a>
         </div>
-      {{ end }} -->
+      {{ end }}
     </div>
 </section>
 {{ end }}

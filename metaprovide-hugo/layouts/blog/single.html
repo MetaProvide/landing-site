@@ -2,7 +2,14 @@
     <article class="max-w-content">
         <h1>{{ .Title }}</h1>
         <p>
-            <img src="{{ .Params.mainImage }}" alt="{{ .Title }}" />
+            <img 
+                src="{{ .Params.mainImage }}" 
+                alt="{{ if .Params.mainImageAltText }}{{ .Params.mainImageAltText }}{{ else }}{{ .Title }}{{ end }}" />
+            
+            {{ if .Params.mainImageAltText }}
+                <p class="text-small">{{.Params.mainImageAltText}}</p>
+            {{ end }}
+            
         </p>
         <p>{{ .Content }}</p>
     </article>

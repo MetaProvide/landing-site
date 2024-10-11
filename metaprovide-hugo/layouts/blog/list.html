@@ -5,7 +5,7 @@
       <li class="posts-list-item">
         <a href="{{ .Permalink }}">
           <p>{{ .Title }} | {{ .Date.Format "January 2006" }}</p>
-          <img src="{{ .Params.mainImage }}" alt="{{ .Title }}" />
+          <img class="posts-list-image" src="{{ .Params.mainImage }}" alt="{{ .Title }}" />
           <div>Read</div>
         </a>
       </li>

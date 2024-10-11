@@ -3,10 +3,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="MetaProvide,Decentralized Data Collaboration,Web3 Transition,Nextcloud,Swarm,Decentralized Platforms,Self-Hosted Storage,Data Privacy">
+    <meta name="author" content="MetaProvide">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ .Description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ .Params.mainImage }}">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Title }}">
+    <meta name="twitter:description" content="{{ .Description }}">
+    <meta name="twitter:image" content="{{ .Params.mainImage }}">
+   
+
     <!-- Add other meta tags, stylesheets, and scripts from the original head -->
     <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/util.css" | relURL }}" />
     <script src="{{ "js/carousel.js" | relURL }}" async></script>
+    <script src="{{ "js/main.js" | relURL }}" async></script>
     {{ block "additional_head" . }}{{ end }}
   </head>
   
